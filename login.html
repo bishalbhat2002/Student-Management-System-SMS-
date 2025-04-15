@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Login page</title>
+       <link rel="stylesheet" href="CSS/loginstyle.css">
+</head>
+
+<body>
+       <nav><a href="">SMS</a></nav>
+
+       <form action="" method="post" name="loginForm" enctype="multipart/form-data">
+              <div class="login">Login</div>
+              <div>
+                     <label for="role">As:</label> <br>
+                     <select name="role" id="role" required>
+                            <option value="admin">Admin</option>
+                            <option value="teacher">Teacher</option>
+                            <option value="student">Student</option>
+                     </select> <br>
+              </div>
+                
+              <div>
+                     <label for="username">Username</label> <br>
+                     <input type="text" name="username" id="username"> <br>
+              </div>
+
+              <div>
+                     <label for="password"> Password</label> <br>
+                     <input type="password" name="password" id="password" required> <br>
+              </div>
+
+              <input type="submit" value="login" class="submit-btn">
+       </form>
+</body>
+
+</html>

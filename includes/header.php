@@ -5,14 +5,6 @@
               header('location:login.php');
               exit();
        }
-       if($_SESSION['role'] === 'teacher'){
-              header('location:../teacher/dashboard.php');
-              exit();
-       }
-       if($_SESSION['role'] === 'student'){
-              header('location:../student/dashboard.php');
-              exit();
-       }
 ?>
 
 <!DOCTYPE html>

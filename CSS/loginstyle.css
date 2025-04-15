@@ -1,0 +1,105 @@
+:root {
+       font-size: 62.5%;
+
+       /* Colors */
+       --primary-bg: #292727;
+       --secondary-bg1: #717171;
+       --secondary-bg2: #414141;
+       --sidebar-bg: #292727;
+       --card-bg: #587eff;
+
+       --primary-font-color: #ffffff;
+       --secondary-font-color: #252525;
+
+
+       --shadow: 0.2rem 0 1rem 0 rgb(24, 22, 22);
+}
+
+* {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: system-ui, "Segoe UI", sans-serif;
+}
+
+body {
+       width: 100vw;
+       height: 100vh;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap: 10rem;
+       background-color: var(--secondary-bg2);
+       nav{
+              height: 8rem;
+              background-color: var(--primary-bg);
+              width: 100%;
+              display: grid;
+              place-content: center;
+              box-shadow: var(--shadow);
+              a{
+                     color: var(--primary-font-color);
+                     text-decoration: none;
+                     font-size: 4rem;
+                     font-weight: bolder;
+              }
+       }
+       form{
+              border: 0.1rem solid white;
+              width: min(40rem, 95vw);
+              height: 45rem;
+              padding: 1.5rem;
+              background-color: #dfdfdf63;
+              border-radius: 0.5rem;
+              box-shadow: var(--shadow);
+
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+
+              gap: 2rem;
+
+              .login{
+                     font-size: 4rem;
+                     text-align: center;
+                     width: 100%;
+                     font-weight: 600;
+                     border-bottom: 0.1rem solid #474747;
+              }
+              label{
+                     font-size: 2rem;
+              }
+              input, select{
+                     width: min(35rem, 90vw);
+                     font-size: 2rem;
+                     padding: 0.5rem 1rem;
+                     border-radius: 0.5rem;
+                     border: none;
+
+                     margin-top: 0.3rem;
+                     color: #474747;
+              }
+
+              input:focus, select:focus{
+                     border: none;
+                     outline: 2px solid rgb(6, 6, 214);
+              }
+
+              input[type="submit"]{
+                     width: min(15rem, 40vw);
+                     color: var(--primary-font-color);
+                     background-color: var(--card-bg);
+                     margin-top: 2rem;
+                     border-radius: 0.5rem;
+                     border: 0.1rem solid rgb(36, 36, 36);
+                     transition: all 200ms ease;
+              }
+              input[type="submit"]:hover{
+                     background-color: var(--card-bg);
+                     transform: scale(1.1);
+              }
+              input[type="submit"]:active{
+                     transform: scale(0.99);
+              }
+       }
+}
