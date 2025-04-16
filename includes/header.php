@@ -5,6 +5,17 @@
               header('location:login.php');
               exit();
        }
+       
+       define("BASE_URL", "http://localhost/minor%20project/Student%20Management%20System");
+
+       if(isset($_GET['logout'])){
+              session_unset();
+              session_destroy();
+              header("location: ".BASE_URL."/login.php");
+              exit();
+       }
+
+      
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +24,7 @@
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>Student Management System</title>
-       <link rel="stylesheet" href="CSS/style.css">
+       <link rel="stylesheet" href="../../CSS/style.css">
 </head>
 <body>
        <div class="logo">SMS</div>
@@ -21,7 +32,7 @@
 
               <?php if($_SESSION['role']==='admin'){ ?>
                      <ul>
-                            <li><a href="/">Dashboard</a></li>
+                            <li><a href="<?php echo BASE_URL.'/src/admin/dashboard.php'; ?>">Dashboard</a></li>
                             <li><a href="/">Semesters</a></li>
                             <li><a href="/">Students</a></li>
                             <li><a href="/">Teachers</a></li>
@@ -55,6 +66,8 @@
 
 
               <div class="logout">
-                     <a href="">Log out</a>
+                     <a href="?logout=true" name="logout">Log out</a>
               </div>
        </nav>
+
+

@@ -1,17 +1,39 @@
 :root {
-  /* Colors */
-  --primary-bg: #292727;
-  --secondary-bg1: #717171;
-  --secondary-bg2: #414141;
-  --sidebar-bg: #292727;
-  --card-bg: #587eff;
-
-  --primary-font-color: #ffffff;
-  --secondary-font-color: #252525;
-
   font-size: 62.5%;
 
-  --shadow: 0.2rem 0 1rem 0 rgb(24, 22, 22);
+  /* Background Colors */
+  --bgcolor-primary-100: #292727;
+  --bgcolor-primary-80: #414141;
+  --bgcolor-primary-50: #717171;
+
+  --bgcolor-secondary-100: #0029b1;
+  --bgcolor-secondary-80: #1f51f7;
+  --bgcolor-secondary-50: #567cf9;
+
+  --bgcolor-card: #7171714c;
+
+  /* Text colors */
+  --color-primary-100: #ffffff;
+  --color-primary-80: #cfcfcf;
+  --color-primary-50: #808080;
+
+  --color-secondary-100: #0d0d0d;
+  --color-secondary-80: #2e2d2d;
+  --color-secondary-50: #3d3d3d;
+
+  /* Button colors */
+  --color-success: green;
+  --color-danger: rgb(255, 85, 0);
+  --color-warning: rgb(225, 255, 0);
+  --color-edit: rgb(76, 76, 248);
+  --color-update: rgb(59, 79, 255);
+  --color-delete: rgb(225, 55, 17);
+  --bgcolor-hover: rgb(49, 49, 255);
+  --color-hover: rgb(253, 253, 253);
+  --color-reset: rgba(215, 62, 250, 0.682);
+  --color-highlighter: rgb(254, 187, 63);
+
+  --shadow: 0.1rem 0.1rem 0.8rem 0 var(--color-secondary-100);
 }
 
 * {
@@ -21,9 +43,64 @@
   font-family: system-ui, "Segoe UI", sans-serif;
 }
 
+/* Button Styles starts here */
+a {
+  display: inline-block;
+  transition: all 200ms ease;
+}
+a:hover {
+  transform: scale(1.08);
+}
+a:active {
+  transform: scale(0.9);
+}
+
+.update-btn {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--color-primary-100);
+  background-color: var(--color-update);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid var(--color-primary-100);
+  border-radius: 0.2rem;
+}
+
+.edit-btn {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--color-primary-100);
+  background-color: var(--color-edit);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid var(--color-primary-100);
+  border-radius: 0.2rem;
+}
+
+.delete-btn {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--color-primary-100);
+  background-color: var(--color-delete);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid var(--color-primary-100);
+  border-radius: 0.2rem;
+}
+
+/* Reusable classes start here */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Reusable classes end here */
+
+/* Button Styles ends here */
 body {
   width: 100vw;
   height: 100vh;
+  background-color: var(--bgcolor-primary-80);
 
   display: grid;
   grid-template-rows: 7rem 3rem 1fr;
@@ -41,14 +118,14 @@ body {
     height: 7rem;
     font-size: 4rem;
     font-weight: bolder;
-    color: var(--primary-font-color);
-    background-color: var(--primary-bg);
+    color: var(--color-primary-100);
+    background-color: var(--bgcolor-primary-100);
     box-shadow: var(--shadow);
   }
 
   nav {
     grid-area: sidebar;
-    background-color: var(--primary-bg);
+    background-color: var(--bgcolor-primary-100);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -66,16 +143,18 @@ body {
       li {
         list-style-type: none;
         width: 100%;
+
         a {
           text-decoration: none;
           font-size: 2rem;
-          color: var(--primary-font-color);
+          color: var(--color-primary-100);
           display: block;
           padding: 0.5rem 0.5rem 0.5rem 3rem;
         }
+
         a:hover {
-          color: var(--secondary-font-color);
-          background-color: var(--secondary-bg1);
+          color: var(--color-secondary-100);
+          background-color: var(--bgcolor-primary-80);
         }
       }
     }
@@ -83,24 +162,271 @@ body {
     .logout {
       margin-bottom: 5rem;
       text-align: center;
+
       a {
         text-decoration: none;
         font-size: 1.5rem;
-        color: var(--primary-font-color);
-        background-color: var(--secondary-bg1);
+        color: var(--color-primary-100);
+        background-color: var(--bgcolor-primary-80);
         padding: 1rem 2rem;
         border-radius: 0.5rem;
-       }
-       a:hover {
+      }
+
+      a:hover {
         color: rgb(36, 36, 36);
         background-color: rgb(179, 178, 178);
-       }
+      }
+    }
+  }
+}
+
+/* Admin code from here... */
+.admin-dashboard {
+  color: var(--color-primary-100);
+  display: block;
+  margin: 0 auto;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 62rem 4rem 40rem;
+  grid-template-rows: 18rem 1fr;
+  grid-template-areas:
+    "greet greet greet"
+    "student-status gap info";
+
+  .greet {
+    grid-area: greet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding-left: 10rem; */
+    h1 {
+      font-size: 4rem;
+    }
+    h3 {
+      font-size: 3rem;
+      font-weight: 600;
+      color: var(--color-highlighter);
     }
   }
 
-  .main{
-       color: var(--primary-font-color);
-       background-color: var(--secondary-bg2);
-       grid-area: main;
+  .student-status {
+    grid-area: student-status;
+    display: grid;
+    grid-template-rows: 12rem 12rem 20rem;
+    grid-template-areas:
+      "total-info"
+      "semester-info"
+      "more-options";
+    margin-top: 1rem;
+
+    /* padding-left: 10rem; */
+
+    .total-info {
+      grid-area: total-info;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin: 2rem 1rem 5rem 1rem;
+    }
+
+    .total-students,
+    .total-teachers {
+      width: 25.5rem;
+      height: 8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      background-color: var(--bgcolor-card);
+      border: 0.1rem solid var(--color-primary-80);
+      border-radius: 0.5rem;
+      gap: 2rem;
+      font-weight: 500;
+      img {
+        height: 4rem;
+      }
+    }
+
+    .semester-info {
+      grid-area: semester-info;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: start;
+      gap: 1rem;
+      margin: 0 1rem;
+
+      .sem-container {
+        background-color: var(--bgcolor-card);
+        outline: 0.1rem solid var(--color-primary-80);
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        height: 6rem;
+        width: 17rem;
+
+        .semester-box {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2rem;
+          font-weight: 500;
+          height: inherit;
+          width: 7rem;
+          background-color: var(--bgcolor-secondary-50);
+          border-radius: 0.5rem 0 0 0.5rem;
+        }
+
+        p {
+          font-size: 2rem;
+          margin-left: 1rem;
+        }
+      }
+    }
+    .more-options {
+      grid-area: more-options;
+      display: flex;
+      align-items: end;
+      margin: 5rem 1rem 2rem 1rem;
+      gap: 2rem;
+
+      .tadmission-container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        height: 6rem;
+        width: 24rem;
+        background-color: var(--bgcolor-card);
+        outline: 0.1rem solid var(--color-primary-80);
+        border-radius: 0.5rem;
+        font-size: 1.5rem;
+
+        .tadmission-box {
+          height: inherit;
+          width: 12rem;
+          font-size: 1.8rem;
+          font-weight: 600;
+          text-align: center;
+          background-color: var(--bgcolor-secondary-50);
+          border-radius: 0.5rem 0 0 0.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .resetPassword-btn {
+        display: inline-block;
+        height: 6rem;
+        width: 20rem;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--color-primary-100);
+        background-color: var(--color-reset);
+        outline: 0.1rem solid var(--color-primary-80);
+        border-radius: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .admin-info {
+    grid-area: info;
+    background-color: var(--bgcolor-card);
+    border: 0.1rem solid var(--color-primary-80);
+    border-radius: 0.5rem;
+    min-width: 35rem;
+    max-width: 50rem;
+    min-height: 45rem;
+    margin: 1.3rem 0 1.5rem 0;
+    padding: 2rem;
+
+    img {
+      height: 14rem;
+      border-radius: 50%;
+      border: 0.2rem solid var(--color-primary-100);
+      display: block;
+      margin: 0 0 2rem 0;
+      box-shadow: var(--shadow);
+    }
+    p {
+      font-size: 1.8rem;
+      line-height: 1.5;
+      display: flex;
+    }
+    p a {
+      margin: 2rem 1rem 1rem 1rem;
+    }
   }
 }
+
+@media (width <= 576px){
+  :root{
+    font-size: 50%;
+  }
+  nav{
+    display: hidden;
+  }
+  .admin-dashboard{
+    grid-template-rows: 1fr 3fr 4fr;
+    grid-template-areas:
+      "greet"
+      "student-status"
+      "info";
+  }
+
+  .student-status {
+    grid-template-rows: 12rem 12rem 5rem;
+    grid-template-areas:
+      "total-info"
+      "semester-info"
+      "more-options";
+}
+}
+
+.updateAdminInfo{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+form {
+  border: 0.1rem solid var(--color-primary-100);
+  width: min(40rem, 95vw);
+  padding: 1.5rem;
+  background-color: #dfdfdf63;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 1rem;
+
+  label {
+    font-size: 2rem;
+    color: var(--bgcolor-primary-100);
+  }
+  input,
+  select {
+    width: min(35rem, 90vw);
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+  
+    margin-top: 0.3rem;
+    color: var(--bgcolor-primary-80);
+  }
+  
+  input:focus,
+  select:focus {
+    border: none;
+    outline: 0.2rem solid var(--bgcolor-secondary-80);
+  }
+}
+

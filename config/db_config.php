@@ -7,7 +7,7 @@
        #Connecting with MySQL
        try{
               $conn = new mysqli($servername, $username, $password);
-              echo "<br>MySQL connected Successfully..."; 
+              // echo "<br>MySQL connected Successfully..."; 
        }catch(Exception $e){
               die("<b>MySQL connection Failed: </b>".$e->getMessage());
        }
@@ -17,7 +17,7 @@
               $sql = "CREATE database if not exists $dbname";
               $conn->query($sql);
               $conn->select_db($dbname);
-              echo "<br>Database Selected Successfully...";
+              // echo "<br>Database Selected Successfully...";
        }catch(Exception $e){
               die("<b>Database Creation Failed: </b>".$e->getMessage());
        }
@@ -31,7 +31,7 @@
                       role enum('admin', 'student', 'teacher') not null
                      )";
               $conn->query($sql);
-              echo "<br>Table Created Successfully...";
+              // echo "<br>Table Created Successfully...";
        }catch(Exception $e){
               die("<b>Users Table Creation Failed: </b>".$e->getMessage());
        }       
@@ -39,9 +39,9 @@
        #Inserting demo records in users table for Testing...  // Comment this part after executing this file once...
        // try{
        //        $sql = "INSERT into users(username, password, role) values
-       //                ('admin', 0000, 'admin'),
-       //                ('teacher', 0000, 'teacher'),
-       //                ('student', 0000, 'student')";
+       //                ('admin', '0000', 'admin'),
+       //                ('teacher', '0000', 'teacher'),
+       //                ('student', '0000', 'student')";
        //        $conn->query($sql);
        //        echo "<br>Demo Data Inserted Successfully...";
        // }catch(Exception $e){

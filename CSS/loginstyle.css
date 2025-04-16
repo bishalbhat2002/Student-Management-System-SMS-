@@ -1,105 +1,145 @@
 :root {
-       font-size: 62.5%;
+  font-size: 62.5%;
 
-       /* Colors */
-       --primary-bg: #292727;
-       --secondary-bg1: #717171;
-       --secondary-bg2: #414141;
-       --sidebar-bg: #292727;
-       --card-bg: #587eff;
+  /* Background Colors */
+  --bgcolor-primary-100: #292727;
+  --bgcolor-primary-80: #414141;
+  --bgcolor-primary-50: #717171;
 
-       --primary-font-color: #ffffff;
-       --secondary-font-color: #252525;
+  --bgcolor-secondary-100: #0029b1;
+  --bgcolor-secondary-80: #1f51f7;
+  --bgcolor-secondary-50: #567cf9;
 
+  /* Text Colors */
+  --color-primary-100: #ffffff;
+  --color-primary-80: #cfcfcf;
+  --color-primary-50: #808080;
 
-       --shadow: 0.2rem 0 1rem 0 rgb(24, 22, 22);
+  --color-secondary-100: #242424;
+  --color-secondary-80: #404040;
+  --color-secondary-50: #535353cd;
+
+  /* Button colors */
+  --color-success: green;
+  --color-danger: rgb(255, 85, 0);
+  --color-warning: rgb(225, 255, 0);
+  --color-edit: rgb(76, 76, 248);
+  --color-update: rgb(184, 92, 250);
+  --color-delete: rgb(225, 55, 17);
+
+  --shadow: 0.1rem 0.1rem 1.5rem 0 var(--color-secondary-100);
 }
 
 * {
-       margin: 0;
-       padding: 0;
-       box-sizing: border-box;
-       font-family: system-ui, "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, "Segoe UI", sans-serif;
 }
 
 body {
-       width: 100vw;
-       height: 100vh;
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       gap: 10rem;
-       background-color: var(--secondary-bg2);
-       nav{
-              height: 8rem;
-              background-color: var(--primary-bg);
-              width: 100%;
-              display: grid;
-              place-content: center;
-              box-shadow: var(--shadow);
-              a{
-                     color: var(--primary-font-color);
-                     text-decoration: none;
-                     font-size: 4rem;
-                     font-weight: bolder;
-              }
-       }
-       form{
-              border: 0.1rem solid white;
-              width: min(40rem, 95vw);
-              height: 45rem;
-              padding: 1.5rem;
-              background-color: #dfdfdf63;
-              border-radius: 0.5rem;
-              box-shadow: var(--shadow);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rem;
+  background-color: var(--bgcolor-primary-80);
+  nav {
+    height: 8rem;
+    background-color: var(--bgcolor-primary-100);
+    width: 100%;
+    display: grid;
+    place-content: center;
+    box-shadow: var(--shadow);
+    a {
+      color: var(--color-primary-100);
+      text-decoration: none;
+      font-size: 4rem;
+      font-weight: bolder;
+    }
+  }
+  form {
+    border: 0.1rem solid var(--color-primary-100);
+    width: min(40rem, 95vw);
+    height: 45rem;
+    padding: 1.5rem;
+    background-color: #dfdfdf63;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
 
-              display: flex;
-              align-items: center;
-              flex-direction: column;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
-              gap: 2rem;
+    gap: 2rem;
 
-              .login{
-                     font-size: 4rem;
-                     text-align: center;
-                     width: 100%;
-                     font-weight: 600;
-                     border-bottom: 0.1rem solid #474747;
-              }
-              label{
-                     font-size: 2rem;
-              }
-              input, select{
-                     width: min(35rem, 90vw);
-                     font-size: 2rem;
-                     padding: 0.5rem 1rem;
-                     border-radius: 0.5rem;
-                     border: none;
+    .login {
+      font-size: 4rem;
+      text-align: center;
+      width: 100%;
+      font-weight: 600;
+      color: var(--color-primary-100);
+      border-bottom: 0.1rem solid var(--color-primary-80);
+    }
+    label {
+      font-size: 2rem;
+      color: var(--bgcolor-primary-100);
+    }
+    input,
+    select {
+      width: min(35rem, 90vw);
+      font-size: 2rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      border: none;
 
-                     margin-top: 0.3rem;
-                     color: #474747;
-              }
+      margin-top: 0.3rem;
+      color: var(--bgcolor-primary-80);
+    }
 
-              input:focus, select:focus{
-                     border: none;
-                     outline: 2px solid rgb(6, 6, 214);
-              }
+    input:focus,
+    select:focus {
+      border: none;
+      outline: 0.2rem solid var(--bgcolor-secondary-80);
+    }
 
-              input[type="submit"]{
-                     width: min(15rem, 40vw);
-                     color: var(--primary-font-color);
-                     background-color: var(--card-bg);
-                     margin-top: 2rem;
-                     border-radius: 0.5rem;
-                     border: 0.1rem solid rgb(36, 36, 36);
-                     transition: all 200ms ease;
-              }
-              input[type="submit"]:hover{
-                     background-color: var(--card-bg);
-                     transform: scale(1.1);
-              }
-              input[type="submit"]:active{
-                     transform: scale(0.99);
-              }
-       }
+    #login-btn {
+      display: inline-block;
+      font-size: 2rem;
+      width: min(15rem, 40vw);
+      color: var(--color-primary-100);
+      background-color: var(--bgcolor-secondary-50);
+      margin-top: 2rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      border: 0.1rem solid var(--color-primary-80);
+      transition: all 200ms ease;
+    }
+    #login-btn:hover {
+      background-color: var(--bgcolor-secondary-80);
+      transform: scale(1.05);
+    }
+    #login-btn:active {
+      transform: scale(0.99);
+    }
+  }
+
+  #error {
+    background-color: var(--color-danger);
+    color: var(--color-primary-100);
+    font-weight: 500;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .hide {
+    opacity: 0;
+    transition: all 500ms ease;
+    cursor: default;
+  }
 }
