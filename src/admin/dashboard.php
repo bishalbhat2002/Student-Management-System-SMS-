@@ -1,4 +1,5 @@
 <?php require_once "../../includes/header.php"; ?>
+<div class="center">
 <div class="admin-dashboard">
        <div class="greet">
               <h1>Welcome Admin !!</h1>
@@ -21,22 +22,30 @@
 
               <div class="more-options">
                      <div class="tadmission-container"><div class="tadmission-box">Total <br>Admissions</div> <p>1000 <br>Students</p></div>
-                     <div><a href="" class="resetPassword-btn">Reset Password</a></div>
+                     <div><a href="resetPassword.php" class="resetPassword-btn">Reset Password</a></div>
               </div>
        </div>
 
        <div class="admin-info">
-              <img src= <?php echo BASE_URL."/assets/image.jpg"; ?> alt="profile picture">
+              <div>
+                     <img src= <?php echo BASE_URL."/assets/image.jpg"; ?> alt="profile picture">
+                     <!-- <form action="" method="post" name="profilePicture" enctype="multipart/form-data">
+                            <input type="file" value="choose file" name="profilePicture">
+                            <input type="submit" name="submit" value="save changes">
+                     </form> -->
+              </div>
               <p>Name: Bishal Bhat</p>
               <p>Gender: Male</p>
+              <p>DOB: 2000-12-19</p>
               <p>Faculty: Department of CSIT</p>
               <p>Mobile: 98XXXXX</p>
               <p>Email: bishalbhat2002@gmail.com</p>
               <p>Address: Mahendranagar, kanchanpur</p>
               <p>username: admin-1001</p>
-              <p class="center"><a href="updateAdminInfo.php" class="update-btn">update Info</a>
-              <a href="" class="update-btn">update Password</a></p>
+              <p class="center"><a href="updateAdminInfo.php?adminInfo" class="update-btn">update Info</a>
+              <a href="updateAdminInfo.php?adminPassword" class="update-btn">update Password</a></p>
        </div>
+</div>
 </div>
 
 <?php require_once "../../includes/footer.php"; ?>

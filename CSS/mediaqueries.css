@@ -1,0 +1,221 @@
+:root {
+  font-size: 62.5%;
+
+  /* Background Colors */
+  --bgcolor-primary-100: #292727;
+  --bgcolor-primary-80: #414141;
+  --bgcolor-primary-50: #717171;
+
+  --bgcolor-secondary-100: #0029b1;
+  --bgcolor-secondary-80: #1f51f7;
+  --bgcolor-secondary-50: #567cf9;
+
+  --bgcolor-card: #7171714c;
+
+  /* Text colors */
+  --color-primary-100: #ffffff;
+  --color-primary-80: #cfcfcf;
+  --color-primary-50: #808080;
+
+  --color-secondary-100: #0d0d0d;
+  --color-secondary-80: #2e2d2d;
+  --color-secondary-50: #3d3d3d;
+
+  /* Button colors */
+  --color-success: green;
+  --color-danger: rgb(255, 85, 0);
+  --color-warning: rgb(225, 255, 0);
+  --color-edit: rgb(76, 76, 248);
+  --color-update: rgb(59, 79, 255);
+  --color-delete: rgb(225, 55, 17);
+  --bgcolor-hover: rgb(49, 49, 255);
+  --color-hover: rgb(253, 253, 253);
+  --color-reset: rgba(215, 62, 250, 0.682);
+  --color-highlighter: rgb(254, 187, 63);
+
+  --shadow: 0.1rem 0.1rem 0.8rem 0 var(--color-secondary-100);
+}
+
+@media (min-width: 1200px) {
+  :root {
+    font-size: 62.5%; /* Keep it the same for large screens */
+  }
+}
+
+/* Tablets (768px to 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  :root {
+    font-size: 56.25%; /* 1rem = 9px */
+  }
+
+  nav {
+    width: 100vw;
+    z-index: 3;
+  }
+  .logo{
+    width: 100%;
+  }
+
+  body{
+    grid-template-rows: 7rem 1fr;
+    grid-template-columns: 1fr;
+    
+    grid-template-areas:
+    "header header"
+    "main";
+  }
+
+  .admin-dashboard {
+    grid-template-columns: 1fr;
+    grid-template-rows: 18rem 1fr 1fr;
+    grid-template-areas:
+      "greet"
+      "student-status"  
+      "info";
+  }
+  .greet {
+    margin-left: 3rem;
+  }
+
+  .student-status {
+    grid-template-rows: 12rem 12rem 15rem;
+    padding: 0.4rem;
+    grid-template-areas:
+      "total-info"
+      "semester-info"
+      "more-options";
+  }
+  
+  .total-info {
+    margin: 2rem 1rem 5rem 1rem;
+  }
+
+}
+
+/* Large smartphones (576px to 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+  :root {
+    font-size: 50%; /* 1rem = 8px */
+  }
+  nav {
+    width: 100vw;
+    z-index: 3;
+  }
+
+  body{
+    grid-template-rows: 7rem 1fr;
+    grid-template-columns: 1fr;
+    
+    grid-template-areas:
+    "header header"
+    "main";
+  }
+
+  .admin-dashboard {
+    grid-template-columns: 1fr;
+    grid-template-rows: 18rem 1fr 1fr;
+    grid-template-areas:
+      "greet"
+      "student-status"  
+      "info";
+  }
+  .greet {
+    margin-left: 3rem;
+  }
+
+  .student-status {
+    grid-template-rows: 12rem 12rem 15rem;
+    padding: 0.4rem;
+    grid-template-areas:
+      "total-info"
+      "semester-info"
+      "more-options";
+  }
+  
+  .total-info {
+    margin: 2rem 1rem 5rem 1rem;
+  }
+
+}
+
+/* Small smartphones (up to 575px) */
+@media (max-width: 575px) {
+  :root {
+    font-size: 43.75%; /* 1rem = 7px */
+  }
+  
+  nav {
+    width: 100vw;
+    z-index: 3;
+  }
+
+  body{
+    grid-template-rows: 7rem 1fr;
+    grid-template-columns: 1fr;
+    
+    grid-template-areas:
+    "header header"
+    "main";
+  }
+
+  .admin-dashboard {
+    grid-template-columns: 1fr;
+    grid-template-rows: 18rem 1fr 1fr;
+    grid-template-areas:
+      "greet"
+      "student-status"  
+      "info";
+  }
+  .greet {
+    margin-left: 3rem;
+  }
+
+  .student-status {
+    grid-template-rows: 12rem 12rem 15rem;
+    padding: 0.4rem;
+    grid-template-areas:
+      "total-info"
+      "semester-info"
+      "more-options";
+  }
+  
+  .total-info {
+    margin: 2rem 1rem 5rem 1rem;
+  }
+
+  
+.admin-info {
+  width: 45rem;
+  min-height: 45rem;
+  margin: 0 auto;
+  padding: 2rem;
+
+  img {
+    height: 14rem;
+    border-radius: 50%;
+    border: 0.2rem solid var(--color-primary-100);
+    display: block;
+    margin: 0 0 2rem 0;
+  }
+  p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    display: flex;
+  }
+  p a {
+    margin: 2rem 1rem 1rem 1rem;
+  }
+}
+  
+/* Update Admin Info.php page media queries for mobile start */
+.updateAdminInfo{
+    margin-top: 10rem;
+
+    label{
+      font-size: 1.8rem;
+    }
+}
+
+
+/* Update Admin Info.php page media queries for mobile end */
+}
