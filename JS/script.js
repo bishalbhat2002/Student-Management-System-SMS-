@@ -1,7 +1,7 @@
 // JS code to indicate active page
 document.addEventListener("DOMContentLoaded", () => {
        const links = document.querySelectorAll("nav a");
-   
+
        links.forEach(link => {
            if (link.href === window.location.href) {
                link.classList.add("active");
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // JS code for hambuger Menu Slider
 function menuSlider(e){       
-       e.preventDefault();
+       // e.preventDefault();
        const navBar = document.querySelector('nav');
        const body = document.body;
        navBar.classList.toggle('disabled');
@@ -20,6 +20,8 @@ function menuSlider(e){
 
 const hambuger = document.getElementById('hambuger-icon');
 hambuger.addEventListener('click', menuSlider);
+menuSlider();        
+
 
 if(innerWidth <= 500){       
        const navLinks = document.querySelectorAll('nav a');
@@ -28,4 +30,8 @@ if(innerWidth <= 500){
        }); 
 }
 
-
+// Code to download Result as PDF... 
+function downloadPDF() {
+       const result = document.querySelector(".result"); // change to your result class
+       html2pdf().from(result).save('result.pdf');
+}
