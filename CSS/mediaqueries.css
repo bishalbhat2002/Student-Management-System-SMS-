@@ -40,6 +40,28 @@
   :root {
     font-size: 62.5%; /* Keep it the same for large screens */
   }
+  .form-expan, .box-expan{
+    width: 89rem;
+    display: grid;
+    grid-template-columns: 41rem 41rem;
+    column-gap: 3rem;
+    div{
+      width: 41rem;
+    }
+
+    .btn-container{
+      grid-column: span 2;
+      width: 100%;
+    }
+    
+    .col-span-2{
+      grid-column: span 2;
+      width: 100%;
+      input{
+        width: 100%
+      }
+    }
+  }
 }
 
 /* Tablets (768px to 1199px) */
@@ -49,25 +71,26 @@
   }
 
   nav {
-    width: 100vw;
+    width: 20rem;
     z-index: 3;
   }
   .logo{
+    grid-area: sidebar;
     width: 100%;
   }
 
   body{
     grid-template-rows: 7rem 1fr;
-    grid-template-columns: 1fr;
+    grid-template-columns: 20rem 1fr;
     
     grid-template-areas:
-    "header header"
-    "main";
+    "sidebar header"
+    "sidebar main";
   }
 
   .admin-dashboard {
-    grid-template-columns: 1fr;
     grid-template-rows: 18rem 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
       "greet"
       "student-status"  
@@ -77,19 +100,34 @@
     margin-left: 3rem;
   }
 
+  
   .student-status {
-    grid-template-rows: 12rem 12rem 15rem;
-    padding: 0.4rem;
+    grid-template-columns: 60rem;
+    grid-template-rows: 12rem 20rem  4rem 10rem;
     grid-template-areas:
       "total-info"
       "semester-info"
+      "gap"
       "more-options";
   }
   
+.admin-info {
+  justify-self: center;
+}
   .total-info {
     margin: 2rem 1rem 5rem 1rem;
   }
 
+  .notices{
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+              'teachers'
+              'students';
+    }
+    .teacher-notices, .student-notices{
+      margin-top: 10rem;
+    }
 }
 
 /* Large smartphones (576px to 767px) */
@@ -98,22 +136,23 @@
     font-size: 50%; /* 1rem = 8px */
   }
   nav {
-    width: 100vw;
+    width: 20rem;
     z-index: 3;
   }
 
   body{
     grid-template-rows: 7rem 1fr;
-    grid-template-columns: 1fr;
+    grid-template-columns: 20rem 1fr;
     
     grid-template-areas:
-    "header header"
-    "main";
+    "sidebar header"
+    "sidebar main";
   }
 
   .admin-dashboard {
     grid-template-columns: 1fr;
     grid-template-rows: 18rem 1fr 1fr;
+    grid-template-columns: 60rem;
     grid-template-areas:
       "greet"
       "student-status"  
@@ -122,19 +161,34 @@
   .greet {
     margin-left: 3rem;
   }
-
-  .student-status {
-    grid-template-rows: 12rem 12rem 15rem;
-    padding: 0.4rem;
-    grid-template-areas:
-      "total-info"
-      "semester-info"
-      "more-options";
-  }
   
-  .total-info {
+.student-status {
+  grid-template-columns: 60rem;
+  grid-template-rows: 12rem 20rem  4rem 10rem;
+  grid-template-areas:
+    "total-info"
+    "semester-info"
+    "gap"
+    "more-options";
+}
+
+  
+.total-info {
     margin: 2rem 1rem 5rem 1rem;
-  }
+}
+.admin-info {
+  justify-self: center;
+}
+.notices{
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+              'teachers'
+              'students';
+    }
+    .teacher-notices, .student-notices{
+      margin-top: 10rem;
+    }
 
 }
 
@@ -151,16 +205,17 @@
 
   body{
     grid-template-rows: 7rem 1fr;
-    grid-template-columns: 1fr;
+    grid-template-columns: 20rem 1fr;
     
     grid-template-areas:
-    "header header"
-    "main";
+    "sidebar header"
+    "sidebar main";
   }
 
   .admin-dashboard {
     grid-template-columns: 1fr;
     grid-template-rows: 18rem 1fr 1fr;
+    grid-template-columns: 60rem;
     grid-template-areas:
       "greet"
       "student-status"  
@@ -170,12 +225,14 @@
     margin-left: 3rem;
   }
 
+  
   .student-status {
-    grid-template-rows: 12rem 12rem 15rem;
-    padding: 0.4rem;
+    grid-template-columns: 60rem;
+    grid-template-rows: 12rem 20rem  4rem 10rem;
     grid-template-areas:
       "total-info"
       "semester-info"
+      "gap"
       "more-options";
   }
   
@@ -187,7 +244,8 @@
 .admin-info {
   width: 45rem;
   min-height: 45rem;
-  margin: 0 auto;
+  align-self: flex-end;
+  justify-self: center;
   padding: 2rem;
 
   img {
@@ -215,7 +273,15 @@
       font-size: 1.8rem;
     }
 }
-
-
 /* Update Admin Info.php page media queries for mobile end */
+.notices{
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+            'teachers'
+            'students';
+  }
+  .teacher-notices, .student-notices{
+    margin-top: 10rem;
+  }
 }

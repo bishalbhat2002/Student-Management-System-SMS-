@@ -1,23 +1,25 @@
 <?php require_once "../../includes/header.php"; ?>
 
-<div class="updateAdminInfo">
+<div class="center-fdct main">
        <div>
               <?php
                      if (isset($_GET['adminInfo'])) {
               ?>
-                     <h1 class="heading">UPDATE FORM</h1>
-                     <form action="" name="updateAdminInfo" method="post" enctype="multipart/form-data" class="form">
+                     <h1 class="heading">Update Admin Info</h1>
+                     <form action="" name="updateAdminInfo" method="post" enctype="multipart/form-data" class="form-expan">
+                            <input type="hidden" name="adminId" value="">
+
                             <div>
-                                   <label for="adminId">Admin ID:</label> <br>
-                                   <input type="text" name="adminId" readonly value="">
-                            </div>
-                            <div>
-                                   <label for="faculty">Faculty:</label> <br>
-                                   <input type="text" name="faculty" readonly value="">
+                                   <label for="username">Username:</label> <br>
+                                   <input type="text" name="username" value="">
                             </div>
                             <div>
                                    <label for="name">Name:</label> <br>
                                    <input type="text" name="name" value="">
+                            </div>
+                            <div>
+                                   <label for="faculty">Faculty:</label> <br>
+                                   <input type="text" name="faculty" readonly value="">
                             </div>
                             <div class="gender">
                                    <label for="gender">Gender:</label> <br>
@@ -29,19 +31,16 @@
                                    <input type="date" name="dob" value="" max="">
                             </div>
                             <div>
-                                   <label for="mobile">Mobile:</label> <br>
-                                   <input type="number" name="mobile" value="">
-                            </div>
-                            <div>
                                    <label for="email">Email:</label> <br>
                                    <input type="email" name="email" value="">
                             </div>
-                            <div>
+                            <div class="col-span-2">
                                    <label for="address">Adress:</label> <br>
                                    <input type="text" name="address" value="">
                             </div>
-
-                            <input type="submit" value="Save Changes" class="update-btn">
+                            <div class="center btn-container">
+                                   <input type="submit" value="Save Changes" class="update-btn">
+                            </div>
                      </form>
               <?php
               }
@@ -50,10 +49,11 @@
               if (isset($_GET['adminPassword'])) {
               ?>
                      <h1 class="heading">UPDATE PASSWORD</h1>
-                     <form action="" name="updateAdminPassword" method="post" enctype="multipart/form-data" class="form">
+                     <form action="" name="updateAdminPassword" method="post" enctype="multipart/form-data" class="form-expan">
+                            <input type="hidden" name="adminId" value="">
                             <div>
-                                   <label for="adminId">Admin ID:</label> <br>
-                                   <input type="text" name="adminId" readonly value="">
+                                   <label for="username">Username:</label> <br>
+                                   <input type="text" name="username" for="username" readonly value="">
                             </div>
                             <div>
                                    <label for="Name">Name:</label> <br>
@@ -63,6 +63,7 @@
                                    <label for="currentPassword">current Password:</label> <br>
                                    <input type="text" name="currentPassword" value="">
                             </div>
+                            <br>
                             <div>
                                    <label for="newPassword">New Password:</label> <br>
                                    <input type="text" name="newPassword" value="">
@@ -71,7 +72,9 @@
                                    <label for="confirmNewPassword">Confirm New Password:</label> <br>
                                    <input type="text" name="confirmNewPassword" value="">
                             </div>
-                            <input type="submit" value="Save Changes" class="update-btn">
+                            <div class="center btn-container">
+                                   <input type="submit" value="Save Changes" class="update-btn">
+                            </div>
                      </form>
               <?php
               }

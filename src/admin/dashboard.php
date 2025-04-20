@@ -1,6 +1,7 @@
 <?php require_once "../../includes/header.php"; ?>
-<div class="center">
-<div class="admin-dashboard">
+
+<div class="center-fdct main">
+<div class="admin-dashboard center-fdct">
        <div class="greet">
               <h1>Welcome Admin !!</h1>
               <h3>Bishal Bhat</h3>    

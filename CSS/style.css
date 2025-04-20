@@ -8,9 +8,10 @@
 
   --bgcolor-secondary-100: #0029b1;
   --bgcolor-secondary-80: #1f51f7;
-  --bgcolor-secondary-50: #567cf9;
+  --bgcolor-secondary-50: #7190f6;
 
   --bgcolor-card: #7171714c;
+  --bgcolor-focus: rgb(136, 199, 244);
 
   /* Text colors */
   --color-primary-100: #ffffff;
@@ -22,18 +23,22 @@
   --color-secondary-50: #3d3d3d;
 
   /* Button colors */
-  --color-success: green;
+  --color-success: rgb(19, 198, 19);
   --color-danger: rgb(255, 85, 0);
   --color-warning: rgb(225, 255, 0);
   --color-edit: rgb(76, 76, 248);
+  --color-add: rgb(226, 41, 246);
   --color-update: rgb(59, 79, 255);
+  --color-save: rgb(219, 54, 252);
   --color-delete: rgb(225, 55, 17);
+  --color-view: rgb(136, 26, 239);
   --bgcolor-hover: rgb(49, 49, 255);
   --color-hover: rgb(253, 253, 253);
   --color-reset: rgba(215, 62, 250, 0.682);
   --color-highlighter: rgb(254, 187, 63);
 
   --shadow: 0.1rem 0.1rem 0.8rem 0 var(--color-secondary-100);
+  --soft-shadow: 0rem 0.3rem 2rem 0 rgba(50, 50, 50, 0.373);
 }
 
 /* Font Size for Responsiveness */
@@ -47,6 +52,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: system-ui, "Segoe UI", sans-serif;
+  scrollbar-width: none;
 }
 
 
@@ -73,12 +79,32 @@ a:active {
   border: 0.1rem solid var(--color-primary-100);
   border-radius: 0.2rem;
 }
+.save-btn {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--color-primary-100);
+  background-color: var(--color-save);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid var(--color-primary-100);
+  border-radius: 0.2rem;
+}
 
 .edit-btn {
   font-size: 1.5rem;
   text-decoration: none;
   color: var(--color-primary-100);
   background-color: var(--color-edit);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid var(--color-primary-100);
+  border-radius: 0.3rem;
+}
+.add-btn {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--color-primary-100);
+  background-color: var(--color-add);
   display: inline-block;
   padding: 0.5rem 1rem;
   border: 0.1rem solid var(--color-primary-100);
@@ -109,9 +135,32 @@ a:active {
   color: var(--color-primary-100);
   background-color: var(--color-update);
 }
+.view-btn{
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--color-primary-100);
+  background-color: var(--color-view);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid var(--color-primary-100);
+  border-radius: 0.2rem;
+}
 .large{
   font-size: 2rem;
   padding: 1rem 6rem;
+}
+.x-width{
+  font-size: 2rem;
+  min-width: 40rem;
+  padding: 1rem 10rem;
+  width: 60rem;
+  text-align: center;
+}
+.v-align-m{
+  vertical-align: middle;
+}
+.gap{
+  gap: 1.5rem;
 }
 /* Reusable classes start here */
 .center {
@@ -125,7 +174,23 @@ a:active {
   align-items: center;
   flex-direction: column;
 }
-
+.center-fdct {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+.space-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mt-3{
+  margin-top: 3rem;
+}
+.mt-5{
+  margin-top: 5rem;
+}
 #error {
   background-color: var(--color-danger);
   color: var(--color-primary-100);
@@ -136,12 +201,31 @@ a:active {
   font-size: 1.5rem;
   position: absolute;
   bottom: 0;
+  z-index: 15;
 }
+#success {
+  background-color: var(--color-success);
+  color: var(--color-primary-100);
+  font-weight: 500;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 0;
+  z-index: 15;
+}
+
 
 .hide {
   opacity: 0;
   transition: all 500ms ease;
   cursor: default;
+}
+
+.font-large{
+  font-size: 2rem;
+  padding: 1rem 2rem;
 }
 /* Reusable classes end here */
 
@@ -180,14 +264,16 @@ body {
     grid-area: sidebar;
     background-color: var(--bgcolor-primary-100);
     height: 100dvh;
-    position: relative;
+    width: 20rem;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-  
+    z-index: 10;
+    
     box-shadow: var(--shadow);
     transition: all 300ms ease;
 
@@ -251,7 +337,7 @@ body {
   position: fixed;
   top: 1.5rem;
   left: 1.5rem;
-  z-index: 5;
+  z-index: 11;
   a{
     img{
       height: 3rem;
@@ -269,7 +355,12 @@ body {
   grid-template-columns: 1fr;
   grid-template-areas:
   "header"
-  "main";
+  "main";   
+  /* Make a class for main grid area for each page...... */
+}
+
+.main{
+  grid-area: main;
 }
 
 /* CSS code for Slider menu */
@@ -281,7 +372,7 @@ body {
   margin: 0 auto;
   grid-area: main;
   display: grid;
-  grid-template-columns: 62rem 1.5rem 40rem;
+  grid-template-columns: 62rem 5rem 40rem;
   grid-template-rows: 15rem 1fr;
   grid-template-areas:
     "greet greet greet"
@@ -293,6 +384,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 4rem;
   h1 {
     font-size: 4rem;
   }
@@ -305,21 +397,22 @@ body {
 
 .student-status {
   grid-area: student-status;
+  align-self: flex-start;
   display: grid;
-  grid-template-rows: 12rem 12rem 20rem;
+  grid-template-rows: 12rem 20rem  9rem 10rem;
   grid-template-areas:
     "total-info"
     "semester-info"
+    "gap"
     "more-options";
-  margin-top: 1rem;  
 }
 
 .total-info {
   grid-area: total-info;
   display: flex;
-  align-items: center;
+  align-items: start;
+  justify-content: center;
   gap: 2rem;
-  margin: 2rem 1rem 5rem 1rem;
 }
 
 .semester-info {
@@ -327,7 +420,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  justify-content: start;
+  justify-content: center;
   gap: 1rem;
   margin: 0 1rem;
 
@@ -380,8 +473,8 @@ body {
 .more-options {
   grid-area: more-options;
   display: flex;
-  align-items: end;
-  margin: 5rem 1rem 2rem 1rem;
+  justify-content: center;
+  align-items: start;
   gap: 2rem;
 
   .tadmission-container {
@@ -434,8 +527,8 @@ body {
   min-width: 35rem;
   max-width: 50rem;
   height: 48rem;
-  margin: 1.3rem 0 0 0;
   padding: 2rem;
+  align-self: flex-start;
   div{
     display: flex;
     flex-direction: column;
@@ -475,42 +568,62 @@ body {
 .heading{
   font-size: 3rem;
   color: var(--color-primary-80);
-  margin: 3rem 0 1rem 0;
+  margin: 3rem 0 2rem 0;
   text-align: center;
 }
 
-.form{
-  width: 35rem;
+.form, .form-expan, .box{
+  min-width: 35rem;
+  width: min(42.5rem, 90%);
+  max-width: 89rem;
   background-color: var(--bgcolor-primary-50);
-  border: 0.2rem solid var(--color-primary-80);
+  border: 0.1rem solid var(--color-primary-80);
   border-radius: 0.5rem;
   padding: 2rem;
   margin: 0 auto;
+  position: relative;
 }
 
 label{
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: var(--color-secondary-80);
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
+
 input[type='text'],
 input[type='password'],
 input[type='number'],
 input[type='email'],
-input[type='date']
+input[type='date'],
+input[type='file'],
+textarea,
+select
 {
-  height: 3rem;
-  width: min(40rem, 95%);
-  margin-bottom: 1rem;
-  padding: 0.5rem;
+  height: 3.5rem;
+  width: 100%;
+  height: 4rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1rem;
   color: var(--color-secondary-50);
-  border-radius: 0.2rem;
+  border-radius: 0.4rem;
   border: none;
+}
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='number']:focus,
+input[type='email']:focus,
+input[type='date']:focus,
+textarea:focus,
+select:focus,
+textarea:focus{
+ background-color: var(--bgcolor-focus);
 }
 
 .gender{
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: var(--color-secondary-80);
   font-weight: 600;
 }
@@ -534,7 +647,345 @@ input[type="submit"]:active{
   transform: scale(0.99);
 }
 
-
-
-
 /* Update Admin Info Code ends here...  */
+
+
+
+
+/* Admin Notices CSS code Starts here */
+.notices{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+            'teachers students';
+  margin-bottom: 5rem;
+}
+
+.teacher-notices{
+  grid-area: teachers;
+  max-height: 55rem;
+  width: 50rem;
+  justify-self: start;
+  align-self: flex-end;
+  overflow: auto;
+  scrollbar-width: none;
+  padding-top: 0;
+}
+.student-notices{
+  padding-top: 0;
+  grid-area: students;
+  max-height: 55rem;
+  width: 50rem;
+  align-self: flex-end;
+  justify-self: end;
+  overflow: auto;
+  scrollbar-width: none;
+}
+.caption{
+  height: 6rem;
+  width: 49.8;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--color-primary-100);
+  background-color: var(--bgcolor-primary-80);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 2rem;
+  position: sticky;
+  margin: 0 -2rem;
+  /* margin-top: -2rem; */
+  top: 0;
+  z-index: 5;
+}
+.add-notice{
+  font-size: 2rem;
+  text-decoration: none;
+  z-index: 5;
+  color: var(--color-primary-100);
+  background-color: var(--bgcolor-secondary-50);
+  padding: 0.7rem 2rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+textarea{
+  height: 10rem;
+}
+
+.notice{
+  text-decoration: none;
+    background-color: var(--color-primary-100);
+    height: 4.5rem;
+    width: 100%;
+    font-size: 1.5rem;
+    border-radius: 0.3rem;
+    display: flex;
+    position: relative;
+    color: var(--color-secondary-50);
+    margin: 0.5rem 0;
+}
+.notice-number{
+  background-color: var(--bgcolor-secondary-50);
+  border-radius: 0.3rem 0 0 0.3rem;
+  height: 100%;
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-primary-100);
+}
+.notice-title{
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+.notice-date{
+  display: inline-block;
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+}
+
+.center-fdc .heading{
+  margin-top: 2rem;
+}
+
+.notice-view-box{
+  max-height: 60rem;
+  width: 50rem;
+  margin-top: -2rem;
+  color: var(--bgcolor-primary-100);
+  h2{
+    font-size: 2.2rem;
+    text-decoration: underline;
+    text-align: center;
+  }
+
+  p{
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+  }
+  .notice-image{
+    border: 0.1rem solid var(--color-primary-80);
+    border-radius: 0.5rem;
+    height: 35rem;
+    margin-bottom: 0.5rem;
+  }
+  div{
+    font-size: 1.3rem;
+  }
+}
+/* Admin Notices CSS code Ends here */
+
+
+/* Admin Semester Code Start here */
+.semester-edit {
+  margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+
+  .sem-container {
+    background-color: var(--bgcolor-card);
+    color: var(--color-primary-100);
+    outline: 0.1rem solid var(--color-primary-80);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    height: 8rem;
+    max-width: 70rem;
+    min-width: 30rem;
+    width: 70rem;
+    position: relative;
+
+    .semester-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 500;
+      height: inherit;
+      width: 10rem;
+      background-color: var(--bgcolor-secondary-50);
+      border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    p {
+      font-size: 2rem;
+      margin-left: 1rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.action{
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  position: absolute;
+  right: 0.6rem;
+
+}
+
+table{
+  background-color: var(--color-primary-100);
+  th{
+    text-align: center;
+    padding: 0.5rem 3rem;
+    font-size: 2rem;
+    color: var(--color-primary-100);
+    background-color: var(--bgcolor-secondary-50);
+  }
+  tr:nth-child(even){
+    background-color: var(--color-primary-80);
+  } 
+  td{
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    color: var(--color-secondary-80);
+    position: relative;
+  }
+  input{
+    box-shadow: var(--soft-shadow);
+  }
+  .tac{
+    text-align: center;
+    vertical-align: middle;
+  }
+  .m-0{
+    margin: 0;
+  }
+  .teacher-info{
+    text-decoration: none;
+    color: var(--color-primary-100);
+    background-color: var(--bgcolor-primary-80);
+    padding-bottom: 0.35rem;
+    border-radius: 10%;
+    text-align: center;
+    display: inline-block;
+    display: grid;
+    place-content: center;
+    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+  }
+}
+
+.edit-table{
+  tr:nth-child(even){
+    background-color: var(--color-primary-100);
+  } 
+}
+/* Admin Semester Code End here */
+
+
+/* Result Section Code Start Here */
+.box-color-white{
+  min-width: 60rem;
+  width: min(70rem, 90%);
+  max-width: 90rem;
+  color: var(--color-secondary-50);
+  background-color: var(--color-primary-100);
+  box-shadow: var(--soft-shadow);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header{
+  border: 0.1rem solid var(--color-primary-80);
+  height: 10rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1rem;
+  img{
+    height: 9rem;
+  }
+  h1, h2, h3{
+    text-align: center;
+  }
+  h1{
+    font-size: 2.7rem;
+  }  
+  h2{
+    font-size: 1.8rem;
+    font-weight: 400;
+  }  
+  h3{
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}
+.info-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.student-info{
+  border: 0.1rem solid var(--color-primary-80);
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+
+.marks{
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+
+  .result-table{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-collapse: collapse;
+    border: 0.1rem solid var(--bgcolor-primary-50);
+
+    th, td{
+      text-align: center;
+      vertical-align: middle;
+      border: none;
+      border: 0.1rem solid var(--bgcolor-primary-50);
+    }
+    th{
+      font-size: 1.5rem;
+      font-weight: 500;
+      background-color: var(--color-primary-80);
+      color: var(--color-secondary-50);
+      padding: 0.2rem 1rem;
+    }
+    tr:nth-child(even){
+      background-color: var(--color-hover);
+    }
+    td{
+      font-weight: 400;
+      color: var(--color-secondary-50);
+    }
+  }
+  tfoot tr td{
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+}
+
+.result-note{
+  font-size: 1.3rem;
+}
+/* Result Section Code End Here */

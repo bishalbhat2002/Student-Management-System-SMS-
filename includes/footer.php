@@ -1,6 +1,11 @@
 <?php
        if(isset($_GET['error'])){
-              echo "<div id='error'>Error: {$_GET['error']}</div>";
+              echo "<div id='error' class='position-bottom'>Error: {$_GET['error']}</div>";
+       }
+?>
+<?php
+       if(isset($_GET['success'])){
+              echo "<div id='success' class='position-bottom'>Success: {$_GET['success']}</div>";
        }
 ?>
 </body>
@@ -8,11 +13,19 @@
 <script>
        // JS code to Show Errors
        window.onload = function hide(){
-       let element =  document.getElementById('error');
-              if(element){
+       let errorElement =  document.getElementById('error');
+              if(errorElement){
                      setTimeout(()=>{
-                            element.classList.add('hide');
-                     }, 1000);
+                            errorElement.classList.add('hide');
+                     }, 3000);
+              }       
+       
+       let successElement =  document.getElementById('success');
+              
+              if(successElement){
+                     setTimeout(()=>{
+                            successElement.classList.add('hide');
+                     }, 3000);
               }
        }
 </script>
