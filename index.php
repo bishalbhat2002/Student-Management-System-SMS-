@@ -1,4 +1,11 @@
 <?php
+
+       session_start();
+       if(!isset($_SESSION['username'])){
+              header('location:login.php');
+              exit();
+       }
+
        if($_SESSION['role'] === 'admin'){
               header("location: src/admin/dashboard.php"); 
               exit();
