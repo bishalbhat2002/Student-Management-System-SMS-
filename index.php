@@ -1,6 +1,4 @@
-<?php 
-       require_once "includes/header.php"; 
-       
+<?php
        if($_SESSION['role'] === 'admin'){
               header("location: src/admin/dashboard.php"); 
               exit();
@@ -14,6 +12,4 @@
               header("location: src/student/dashboard.php"); 
               exit();
        }
-
-       require_once "includes/footer.php"; 
 ?>

@@ -5,7 +5,7 @@
               header('location:login.php');
               exit();
        }
-       require_once "../config/absolutePath.php";              // Include absolute File to header.php file, so we can use absolute path (through BASE_URL constant variable defined in absolutePath.php file)
+       require_once "../../config/absolutePath.php";              // Include absolute File to header.php file, so we can use absolute path (through BASE_URL constant variable defined in absolutePath.php file)
 
        # This block of code is executed only when user clicks on Logout button. This destroys the session.
        if(isset($_GET['logout'])){
