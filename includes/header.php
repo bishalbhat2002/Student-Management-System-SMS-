@@ -5,9 +5,9 @@
               header('location:login.php');
               exit();
        }
-       
-       define("BASE_URL", "http://localhost/minor%20project/Student%20Management%20System");
+       require_once "../config/absolutePath.php";              // Include absolute File to header.php file, so we can use absolute path (through BASE_URL constant variable defined in absolutePath.php file)
 
+       # This block of code is executed only when user clicks on Logout button. This destroys the session.
        if(isset($_GET['logout'])){
               session_unset();
               session_destroy();
