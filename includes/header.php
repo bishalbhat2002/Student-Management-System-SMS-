@@ -30,7 +30,7 @@
 </head>
 <body>
        <div class="logo">SMS</div>
-       <div id="hambuger-icon"><a href=""><img src="../../assets/hambuger.png" alt="Hamburger icon"></a></div>
+       <div id="hambuger-icon"><img src="../../assets/hambuger.png" alt="Hamburger icon"></div>
        <nav class="navbar">
 
               <?php if($_SESSION['role']==='admin'){ ?>
