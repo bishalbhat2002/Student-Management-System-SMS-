@@ -41,164 +41,7 @@
   --soft-shadow: 0rem 0.3rem 2rem 0 rgba(50, 50, 50, 0.373);
 }
 
-/* Font Size for Responsiveness */
-
-/* Large desktops and laptops (1200px and above) */
-
-/* Font Size for Responsiveness */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: system-ui, "Segoe UI", sans-serif;
-  scrollbar-width: none;
-}
-
-
-
-/* Button Styles starts here */
-a, .btn {
-  display: inline-block;
-  transition: all 200ms ease;
-}
-a:hover, .btn:hover {
-  transform: scale(1.08);
-}
-a:active, .btn:active {
-  transform: scale(0.9);
-}
-
-.update-btn {
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: var(--color-primary-100);
-  background-color: var(--color-update);
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 0.1rem solid var(--color-primary-100);
-  border-radius: 0.2rem;
-}
-.save-btn {
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: var(--color-primary-100);
-  background-color: var(--color-save);
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 0.1rem solid var(--color-primary-100);
-  border-radius: 0.2rem;
-}
-
-.edit-btn {
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: var(--color-primary-100);
-  background-color: var(--color-edit);
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 0.1rem solid var(--color-primary-100);
-  border-radius: 0.3rem;
-}
-.add-btn {
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: var(--color-primary-100);
-  background-color: var(--color-add);
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 0.1rem solid var(--color-primary-100);
-  border-radius: 0.5rem;
-}
-
-.delete-btn {
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: var(--color-primary-100);
-  background-color: var(--color-delete);
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 0.1rem solid var(--color-primary-100);
-  border-radius: 0.2rem;
-}
-.reset-btn {
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: var(--color-primary-100);
-  background-color: var(--color-reset);
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 0.1rem solid var(--color-primary-100);
-  border-radius: 0.2rem;
-}
-.submit-btn {
-  color: var(--color-primary-100);
-  background-color: var(--color-update);
-}
-.view-btn{
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: var(--color-primary-100);
-  background-color: var(--color-view);
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 0.1rem solid var(--color-primary-100);
-  border-radius: 0.2rem;
-}
-.large{
-  display: inline-block;
-  font-size: 2rem;
-  padding: 1rem 6rem;
-}
-.x-width{
-  font-size: 2rem;
-  min-width: 30rem;
-  padding: 1rem 10rem;
-  width: 60rem;
-  text-align: center;
-  margin: 0 2rem;
-}
-.v-align-m{
-  vertical-align: middle;
-}
-.gap{
-  gap: 1.5rem;
-}
-/* Reusable classes start here */
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.center-fdc {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.center-fdct {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  flex-direction: column;
-}
-.space-between{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.mt-1{
-  margin-top: 1rem;
-}
-.mt-2{
-  margin-top: 2rem;
-}
-.mt-3{
-  margin-top: 3rem;
-}
-.mt-5{
-  margin-top: 5rem;
-}
+/* CSS Code for Error and Success Handling Start Here */
 #error {
   background-color: var(--color-danger);
   color: var(--color-primary-100);
@@ -224,20 +67,15 @@ a:active, .btn:active {
   z-index: 15;
 }
 
-
 .hide {
   opacity: 0;
   transition: all 500ms ease;
   cursor: default;
 }
+/* CSS Code for Error and Success Handling End Here */
 
-.font-large{
-  font-size: 2rem;
-  padding: 1rem 2rem;
-}
-/* Reusable classes end here */
 
-/* Button Styles ends here */
+/* Common CSS Code for Body START here*/
 body {
   width: 100vw;
   height: 100vh;
@@ -249,11 +87,12 @@ body {
   grid-template-columns: 20rem 1fr;
 
   grid-template-areas:
-    "sidebar header"
+    "header header"
     "sidebar main";
 
   .logo {
     grid-area: header;
+    grid-column: span 2;
     display: grid;
     place-content: center;
     width: 100%;
@@ -271,16 +110,16 @@ body {
   nav {
     grid-area: sidebar;
     background-color: var(--bgcolor-primary-100);
-    height: 100dvh;
+    height: calc(100% - 7rem);
     width: 20rem;
     position: fixed;
-    top: 0;
+    top: 7rem;
     left: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-    z-index: 10;
+    z-index: 2;
     
     box-shadow: var(--shadow);
     transition: all 300ms ease;
@@ -339,39 +178,43 @@ body {
       }
     }
   }
-}
-#hambuger-icon{
-  margin: 1rem;
-  position: fixed;
-  top: 1.5rem;
-  left: 1.5rem;
-  z-index: 11;
-  a{
-    img{
-      height: 3rem;
-      filter: invert();
+  #hambuger-icon{
+    margin: 1rem;
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: 11;
+    a{
+      img{
+        height: 3rem;
+        filter: invert();
+      }
     }
   }
-}
 
-/* CSS code for Slider menu */
-.disabled{
-  display: none;
-}
-.allfit{
-  grid-template-rows: 7rem 1fr;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-  "header"
-  "main";   
+  /* CSS code for Slider menu start Here*/
+  .disabled{
+    display: none;
+  }
+  .allfit{
+    grid-template-rows: 7rem 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "main";   
+  }
+  /* CSS code for Slider menu End here*/
+  
+  
   /* Make a class for main grid area for each page...... */
-}
+  .main{
+    grid-area: main;
+  }
 
-.main{
-  grid-area: main;
 }
+/* Common CSS Code for Body END here*/
 
-/* CSS code for Slider menu */
+
 
 /* Admin code from here... */
 .admin-dashboard {
@@ -562,10 +405,6 @@ body {
   }
 }
 
-
-
-
-
 /* Update Admin Info Code start here...  */
 .updateAdminInfo{
    display: flex;
@@ -579,85 +418,9 @@ body {
   margin: 3rem 0 2rem 0;
   text-align: center;
 }
-
-.form, .form-expan, .box{
-  min-width: 35rem;
-  width: min(42.5rem, 90%);
-  max-width: 89rem;
-  background-color: var(--bgcolor-primary-50);
-  border: 0.1rem solid var(--color-primary-80);
-  border-radius: 0.5rem;
-  padding: 2rem;
-  margin: 0 auto;
-  position: relative;
-}
-
-label{
-  font-size: 1.8rem;
-  color: var(--color-secondary-80);
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-input[type='text'],
-input[type='password'],
-input[type='number'],
-input[type='email'],
-input[type='date'],
-input[type='file'],
-textarea,
-select
-{
-  height: 3.5rem;
-  width: 100%;
-  height: 4rem;
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin-bottom: 1.5rem;
-  padding: 0.5rem 1rem;
-  color: var(--color-secondary-50);
-  border-radius: 0.4rem;
-  border: none;
-}
-input[type='text']:focus,
-input[type='password']:focus,
-input[type='number']:focus,
-input[type='email']:focus,
-input[type='date']:focus,
-textarea:focus,
-select:focus,
-textarea:focus{
- background-color: var(--bgcolor-focus);
-}
-
-.gender{
-  font-size: 1.8rem;
-  color: var(--color-secondary-80);
-  font-weight: 600;
-}
-input[type='radio']{
-  transform: scale(1.5);
-  margin: 0.5rem 0.5rem 1rem 4rem;
-}
-
-input[type="submit"]{
-  padding: 0.7rem 1.5rem;
-  border-radius: 0.5rem;
-  display: inline-block;
-  text-align: center;
-  margin: 1rem 0;
-  transition: all 300ms ease;
-}
-input[type="submit"]:hover{
-  transform: scale(1.1);
-}  
-input[type="submit"]:active{
-  transform: scale(0.99);
-}
+/* FORM related codes are written on UtilityClasses.css file because form are used on many web pages. */
 
 /* Update Admin Info Code ends here...  */
-
-
 
 
 /* Admin Notices CSS code Starts here */
@@ -998,4 +761,80 @@ table{
 .result-note{
   font-size: 1.3rem;
 }
+
+/* Add Result CSS codes */
+.add-result-table-style{
+  width: inherit;
+  padding: 0.5rem;
+  color: var(--color-secondary-80);
+  margin-top: 1rem;
+}
+
+.subject-code{
+  height: 2rem;
+  width: 10rem;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-radius: 0.2rem;
+}
+.subject-name{
+  padding-left: 1rem;
+  vertical-align: middle;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.marks-input-box{
+  width: 15rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  input{
+    margin: 0.5rem 0;
+  }
+}
+
+.form-result-analyze{
+  min-width: 100rem;
+  max-width: 80vw;
+  max-height: calc(100dvh - 17rem);
+  background-color: var(--bgcolor-primary-50);
+  border: 0.1rem solid var(--color-primary-80);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 0 auto;
+  
+  div{
+    position: sticky;
+    top: 0;
+
+    label{
+      font-weight: 500;
+      color: var(--color-primary-100);
+    }
+    select{
+      font-size: 1.3rem;
+      height: 3rem;
+      width: 25rem;
+    }
+    option{
+      width: 30rem;
+    }
+    .btn{
+      margin-top: -1.4rem;
+    }
+  }
+  table{
+    th{
+      height: 4.5rem;
+      font-size: 1.5rem;
+      padding: 0 0.7rem;
+    }
+    td{
+      border: 0.2rem solid var(--color-primary-80);
+    }
+  }
+}
+
 /* Result Section Code End Here */

@@ -24,8 +24,9 @@
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>Student Management System</title>
-       <link rel="stylesheet" href="../../CSS/style.css">
-       <link rel="stylesheet" href="../../CSS/mediaqueries.css">
+       <link rel="stylesheet" href="../../CSS/utilityClasses.css">                  <!-- Utility Classes linked first because we might overwrite some classes in Style.css file, It contains classes with most used properties. --> 
+       <link rel="stylesheet" href="../../CSS/style.css">                           <!-- Style.css added for general Styling -->
+       <link rel="stylesheet" href="../../CSS/mediaqueries.css">                    <!-- Mediaqueries.css file contains code required for making the website responsive -->
 </head>
 <body>
        <div class="logo">SMS</div>

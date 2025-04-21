@@ -128,6 +128,29 @@
     .teacher-notices, .student-notices{
       margin-top: 10rem;
     }
+
+    .form-expan, .box-expan{
+      width: 89rem;
+      display: grid;
+      grid-template-columns: 41rem 41rem;
+      column-gap: 3rem;
+      div{
+        width: 41rem;
+      }
+  
+      .btn-container{
+        grid-column: span 2;
+        width: 100%;
+      }
+      
+      .col-span-2{
+        grid-column: span 2;
+        width: 100%;
+        input{
+          width: 100%
+        }
+      }
+    }
 }
 
 /* Large smartphones (576px to 767px) */
@@ -189,7 +212,6 @@
     .teacher-notices, .student-notices{
       margin-top: 10rem;
     }
-
 }
 
 /* Small smartphones (up to 575px) */

@@ -1,4 +1,4 @@
 <?php
-      define("BASE_URL", "http://localhost/minor%20project/Student%20Management%20System");
+      define("BASE_URL", "http://localhost/sms");
       # change absolute path from header.php file.... 
 ?>

@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // JS code for hambuger Menu Slider
 function menuSlider(e){       
-       // e.preventDefault();
+       e.preventDefault();
        const navBar = document.querySelector('nav');
        const body = document.body;
        navBar.classList.toggle('disabled');
@@ -20,7 +20,7 @@ function menuSlider(e){
 
 const hambuger = document.getElementById('hambuger-icon');
 hambuger.addEventListener('click', menuSlider);
-menuSlider();        
+// menuSlider();        
 
 
 if(innerWidth <= 500){       
