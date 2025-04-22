@@ -415,7 +415,7 @@ body {
 .heading{
   font-size: 3rem;
   color: var(--color-primary-80);
-  margin: 3rem 0 2rem 0;
+  margin: 2rem 0 2rem 0;
   text-align: center;
 }
 /* FORM related codes are written on UtilityClasses.css file because form are used on many web pages. */
@@ -842,3 +842,32 @@ table{
 /* Teacher Section Code START here */
 
 /* Teacher Section Code END here */
+
+
+/* Student Section Code START here */
+.small-input-field input[type='text'],
+.small-input-field input[type='password'],
+.small-input-field input[type='number'],
+.small-input-field input[type='email'],
+.small-input-field input[type='date'],
+.small-input-field input[type='file'],
+.small-input-field textarea,
+.small-input-field select
+{
+  width: 100%;
+  height: 3rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.small-input-field .image{
+  height: 10rem;
+  border-width: 0.1rem;
+}
+.small-input-field .small-image{
+  height: 7rem;
+  border-width: 0.1rem;
+}
+
+
+/* Student Section Code END here */

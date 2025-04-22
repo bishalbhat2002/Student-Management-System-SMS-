@@ -30,10 +30,6 @@
        <div class="admin-info">
               <div>
                      <img src= <?php echo BASE_URL."/assets/image.jpg"; ?> alt="profile picture">
-                     <!-- <form action="" method="post" name="profilePicture" enctype="multipart/form-data">
-                            <input type="file" value="choose file" name="profilePicture">
-                            <input type="submit" name="submit" value="save changes">
-                     </form> -->
               </div>
               <p>Name: Bishal Bhat</p>
               <p>Gender: Male</p>

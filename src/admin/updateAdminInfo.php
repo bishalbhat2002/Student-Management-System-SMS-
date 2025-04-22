@@ -9,6 +9,10 @@
                      <form action="" name="updateAdminInfo" method="post" enctype="multipart/form-data" class="form-expan">
                             <input type="hidden" name="adminId" value="">
 
+                            <div class="col-span-2 center mb-2">
+                                   <img src="../../assets/image.jpg" alt="Photo" class="image">
+                            </div>
+
                             <div>
                                    <label for="username">Username:</label> <br>
                                    <input type="text" name="username" value="">
@@ -18,8 +22,8 @@
                                    <input type="text" name="name" value="">
                             </div>
                             <div>
-                                   <label for="faculty">Faculty:</label> <br>
-                                   <input type="text" name="faculty" readonly value="">
+                                   <label for="dob">DOB:</label> <br>
+                                   <input type="date" name="dob" value="" max="">
                             </div>
                             <div class="gender">
                                    <label for="gender">Gender:</label> <br>
@@ -27,17 +31,28 @@
                                    <input type="radio" name="gender" value="female">Female
                             </div>
                             <div>
-                                   <label for="dob">Mobile:</label> <br>
-                                   <input type="date" name="dob" value="" max="">
+                                   <label for="faculty">Faculty:</label> <br>
+                                   <input type="text" name="faculty" readonly value="">
+                            </div>
+                            <div>
+                                   <label for="phone">Mobile:</label> <br>
+                                   <input type="number" name="phone" value="">
                             </div>
                             <div>
                                    <label for="email">Email:</label> <br>
                                    <input type="email" name="email" value="">
                             </div>
-                            <div class="col-span-2">
+  
+                            <div>
                                    <label for="address">Adress:</label> <br>
                                    <input type="text" name="address" value="">
                             </div>
+                            <div>
+                                   <label for="photo">Upload Photo:</label> <br>
+                                   <input type="file" name="photo" id="photo" value="">
+                            </div>
+
+
                             <div class="center btn-container">
                                    <input type="submit" value="Save Changes" class="update-btn">
                             </div>
