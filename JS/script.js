@@ -1,9 +1,9 @@
 // JS code to indicate active page
 document.addEventListener("DOMContentLoaded", () => {
        const links = document.querySelectorAll("nav a");
-
+       const currentUrl = window.location.href.split('?');
        links.forEach(link => {
-           if (link.href === window.location.href) {
+           if (link.href === currentUrl[0]) {
                link.classList.add("active");
            }
        });

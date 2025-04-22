@@ -113,6 +113,10 @@ a:active, .btn:active {
        font-size: 2rem;
        padding: 1rem 2rem;
 }
+.bold{
+       font-weight: bold;
+       color: var(--color-primary-100);
+}
 
 /* Class for Button font-size END */
 
@@ -329,3 +333,22 @@ input[type="submit"]:active{
   transform: scale(0.99);
 }
 /* Form Resusable Code END Here */
+
+/* Table Reusable Code Start Here */
+.smaller-table{
+       th{
+              height: 3rem;
+              font-size: 1.5rem;
+              font-weight: 500;
+              padding: 0.3rem 0.5rem;
+       }
+       td{
+              height: 2rem;
+              font-size: 1.5rem;
+              font-weight: 400;
+              padding: 0.3rem 0.5rem;
+              text-align: center;
+              vertical-align: middle;
+       }
+}
+/* Table Reusable Code End Here */

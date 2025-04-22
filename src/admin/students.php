@@ -199,14 +199,6 @@
                                    <input type="text" name="name" id="name">
                             </div>
                             <div>
-                                   <label for="phone">Phone:</label>
-                                   <input type="number" name="phone" id="phone">
-                            </div>
-                            <div>
-                                   <label for="email">Email:</label>
-                                   <input type="email" name="email" id="email">
-                            </div>                      
-                            <div>
                                    <label for="dob">DOB:</label>
                                    <input type="date" name="dob" id="dob">
                             </div>      
@@ -214,6 +206,14 @@
                                    <label for="gender">Gender:</label><br>
                                    <input type="text" name="gender" id="gender">
                             </div>  
+                            <div>
+                                   <label for="phone">Phone:</label>
+                                   <input type="number" name="phone" id="phone">
+                            </div>
+                            <div>
+                                   <label for="email">Email:</label>
+                                   <input type="email" name="email" id="email">
+                            </div>                      
                             <div>
                                    <label for="address">Address:</label>
                                    <input type="text" name="address" id="address">
@@ -226,11 +226,6 @@
                                    <label for="parent-phone">Parent Phone:</label>
                                    <input type="number" name="parent-phone" id="parent-phone">
                             </div>                                
-
-                            <div> 
-                                   <label for="photo">Upload Photo:</label>
-                                   <input type="file" name="photo" id="photo">
-                            </div> 
                             <div>
                                    <label for="view-results">View Results:</label> <br>
                                    <div id="view-results"> 
@@ -282,14 +277,6 @@
                                    <input type="text" name="name" id="name">
                             </div>
                             <div>
-                                   <label for="phone">Phone:</label>
-                                   <input type="number" name="phone" id="phone">
-                            </div>
-                            <div>
-                                   <label for="email">Email:</label>
-                                   <input type="email" name="email" id="email">
-                            </div>                      
-                            <div>
                                    <label for="dob">DOB:</label>
                                    <input type="date" name="dob" id="dob">
                             </div>      
@@ -298,6 +285,14 @@
                                    <input type="radio" name="gender" value="male">Male
                                    <input type="radio" name="gender" value="female">Female
                             </div>  
+                            <div>
+                                   <label for="phone">Phone:</label>
+                                   <input type="number" name="phone" id="phone">
+                            </div>
+                            <div>
+                                   <label for="email">Email:</label>
+                                   <input type="email" name="email" id="email">
+                            </div>                      
                             <div>
                                    <label for="address">Address:</label>
                                    <input type="text" name="address" id="address">
@@ -368,7 +363,7 @@
                      <h1 class="heading">Add Admission</h1>
                      <form action="" method="post" name="add-admission-form" enctype="multipart/form-data" class="form-expan small-input-field">
                            
-                            <div class="col-span-2 center mb-2">
+                            <div class="col-span-2 center mb-1">
                                    <img src="../../assets/image.jpg" alt="Photo" class="image">
                             </div>       
                             <div>
@@ -395,7 +390,7 @@
                                    <input type="number" name="parent-phone" id="parent-phone">
                             </div>    
                             
-                            <div class="col-span-2 mt-2 mb-2">
+                            <div class="col-span-2 mt-1 mb-1">
                                    <hr>                            
                             </div>
 
@@ -448,87 +443,196 @@
 
 
 
-<!-- Code for editing Adding Student Admission -->
+<!-- Code for Viewing Admission -->
 <?php
-       }else if(isset($_GET['add-admission-regd-no'])){           
+       }else if(isset($_GET['view-admission-semester'])){           
 ?>
               <div class="main center-fdct">
-                     <h1 class="heading">Add Admission</h1>
-                     <form action="" method="post" name="add-admission-form" enctype="multipart/form-data" class="form-expan small-input-field">
-                           
-                            <div class="col-span-2 center mb-2">
-                                   <img src="../../assets/image.jpg" alt="Photo" class="image">
-                            </div>       
-                            <div>
-                                   <label for="regd-no">Registration No:</label>
-                                   <input type="text" name="regd-no" id="regd-no">
-                            </div>  <div>
-                                   <label for="name">Name:</label>
-                                   <input type="text" name="name" id="name">
-                            </div>
-                            <div>
-                                   <label for="phone">Phone:</label>
-                                   <input type="number" name="phone" id="phone">
-                            </div>                        
-                            <div>
-                                   <label for="address">Address:</label>
-                                   <input type="text" name="address" id="address">
-                            </div> 
-                            <div>
-                                   <label for="parent-name">Parent:</label>
-                                   <input type="text" name="parent-name" id="parent-name">
-                            </div>                                
-                            <div>
-                                   <label for="parent-phone">Parent Phone:</label>
-                                   <input type="number" name="parent-phone" id="parent-phone">
-                            </div>    
-                            
-                            <div class="col-span-2 mt-2 mb-2">
-                                   <hr>                            
-                            </div>
+                     <h1 class="heading">Semester X, View Admission</h1>
+                     <div>
+                            <table>
+                                   <thead>
+                                          <tr>
+                                                 <th>Regd. No.</th>
+                                                 <th>Name</th>
+                                                 <th>Fee Submitted</th>
+                                                 <th>Phone</th>
+                                                 <th>Action</th>
+                                          </tr>
+                                   </thead>
+                                   <tbody>
+                                          <tr>
+                                                 <td>SC-4632-32332-323-32</td>
+                                                 <td>Bishal Bhat</td>
+                                                 <td class="tac v-align-m">16500</td>
+                                                 <td>98063888</td>
+                                                 <td>
+                                                        <a href="?view-student-regd-no" class="view-btn">View Student</a>
+                                                 </td>
+                                          </tr>  
+                                          <tr>
+                                                 <td>SC-4632-32332-323-32</td>
+                                                 <td>Bishal Bhat</td>
+                                                 <td class="tac v-align-m">16500</td>
+                                                 <td>98063888</td>
+                                                 <td>
+                                                        <a href="?view-student-regd-no" class="view-btn">View Student</a>
+                                                 </td>
+                                          </tr>
+                                          <tr>
+                                                 <td>SC-4632-32332-323-32</td>
+                                                 <td>Bishal Bhat</td>
+                                                 <td class="tac v-align-m">16500</td>
+                                                 <td>98063888</td>
+                                                 <td>
+                                                        <a href="?view-student-regd-no" class="view-btn">View Student</a>
+                                                 </td>
+                                          </tr>
+                                          <tr>
+                                                 <td>SC-4632-32332-323-32</td>
+                                                 <td>Bishal Bhat</td>
+                                                 <td class="tac v-align-m">16500</td>
+                                                 <td>98063888</td>
+                                                 <td>
+                                                        <a href="?view-student-regd-no" class="view-btn">View Student</a>
+                                                 </td>
+                                          </tr>
+                                          <tr>
+                                                 <td>SC-4632-32332-323-32</td>
+                                                 <td>Bishal Bhat</td>
+                                                 <td class="tac v-align-m">16500</td>
+                                                 <td>98063888</td>
+                                                 <td>
+                                                        <a href="?view-student-regd-no" class="view-btn">View Student</a>
+                                                 </td>
+                                          </tr>       
+                                   </tbody>
+                            </table>
+                     </div>
+              </div>
 
-                            <div> 
-                                   <label for="semester">Select Semester:</label>
-                                   <select name="semester" id="semester">
-                                          <option value="" selected disabled>Select Sem</option>
-                                          <option value="1st Sem">1st Semester</option>
-                                          <option value="8th Sem">8th Semester</option>
-                                   </select>
-                            </div> <br>      
+<!-- Code for entering Batch or Student Registration Number for Viewing  Fees -->
+<?php
+       }else if(isset($_GET['view-fees'])){           
+?>
+              <div class="main center-fdct">
+                     <h1 class="heading">View Fees</h1>
+                     <form action="?view-fees-batch-regd-no" method="post" name="student-regd-form" enctype="multipart/form-data" class="form">
                             <div>
-                                   <label for="amount">Enter Amount:</label>
-                                   <input type="number" name="amount" id="amount" title="Enter Amount Submitted by student in Numbers...">
+                                   <label for="batch">Enter Batch:</label>
+                                   <input type="number" name="batch" id="batch">                                   
+                            </div>
+                            <div class="center large bold">
+                                   OR
                             </div>
                             <div>
-                                   <label for="voucher-photo">Upload Photo:</label>
-                                   <input type="file" name="voucher-photo" id="voucher-photo" title="Upload proof of Amount submit...">
+                                   <label for="regd-no">Enter Regd. No:</label>
+                                   <input type="text" name="regd-no" id="regd-no">                                   
                             </div>
-
-                            <div class="col-span-2 center">
-                                   <button class="add-btn btn large mt-1">Add Admission</button>
-                            </div>        
-
+                            <div class="center">
+                                   <input type="submit" value="View Fees" class="view-btn">
+                            </div>
                      </form>
               </div>
 
-
-
-
-
-
-
-
-
-
-
-
-<!-- Code for entering -->
+<!-- Code for Viewing Fees -->
 <?php
-       }else if(isset($_GET['delete-teacher'])){           
+       }else if(isset($_GET['view-fees-batch-regd-no'])){           
 ?>
               <div class="main center-fdct">
-                     <h1 class="heading">Delete Teacher</h1>
-                     <form action="?delete-teacher-id" method="post" name="teacher-Id-from" enctype="multipart/form-data" class="form">
+                     <h1 class="heading">View Fees - 20YY Batch</h1>
+                     <div>
+                            <table class="smaller-table">
+                                   <thead>
+                                          <tr>
+                                                 <th>Regd. No.</th>
+                                                 <th>Name</th>
+                                                 <th>1st Sem</th>
+                                                 <th>2nd Sem</th>
+                                                 <th>3rd Sem</th>
+                                                 <th>4th Sem</th>
+                                                 <th>5th Sem</th>
+                                                 <th>6th Sem</th>
+                                                 <th>7th Sem</th>
+                                                 <th>8th Sem</th>
+                                                 <th>Action</th>
+                                          </tr>
+                                   </thead>
+                                   <tbody>
+                                          <tr>
+                                                 <td>SC-4632-32332-32</td>
+                                                 <td>Bishal Bhat</td>
+                                                 <td>16500</td>
+                                                 <td>1600, 500</td>
+                                                 <td>16500</td>
+                                                 <td>16500</td>
+                                                 <td>16500</td>
+                                                 <td>16500</td>
+                                                 <td></td>
+                                                 <td></td>
+                                                 <td>
+                                                        <a href="?view-student-regd-no" class="view-btn">View Student</a>
+                                                 </td>
+                                          </tr>                                            
+                                          <tr>
+                                                 <td>SC-4632-32332-32</td>
+                                                 <td>Bishal Bhat</td>
+                                                 <td>16500</td>
+                                                 <td>1600, 500</td>
+                                                 <td>16500</td>
+                                                 <td>16500</td>
+                                                 <td>16500</td>
+                                                 <td>16500</td>
+                                                 <td></td>
+                                                 <td></td>
+                                                 <td>
+                                                        <a href="?view-student-regd-no" class="view-btn">View Student</a>
+                                                 </td>
+                                          </tr>                                            
+                                          <tr>
+                                                 <td>SC-4632-32332-32</td>
+                                                 <td>Bishal Bhat</td>
+                                                 <td>16500</td>
+                                                 <td>1600, 500</td>
+                                                 <td>16500</td>
+                                                 <td>16500</td>
+                                                 <td>16500</td>
+                                                 <td>16500</td>
+                                                 <td></td>
+                                                 <td></td>
+                                                 <td>
+                                                        <a href="?view-student-regd-no" class="view-btn">View Student</a>
+                                                 </td>
+                                          </tr>                                            
+                                          <tr>
+                                                 <td>SC-4632-32332-32</td>
+                                                 <td>Bishal Bhat</td>
+                                                 <td>16500</td>
+                                                 <td>1600, 500</td>
+                                                 <td>16500</td>
+                                                 <td>16500</td>
+                                                 <td>16500</td>
+                                                 <td>16500</td>
+                                                 <td></td>
+                                                 <td></td>
+                                                 <td>
+                                                        <a href="?view-student-regd-no" class="view-btn">View Student</a>
+                                                 </td>
+                                          </tr>  
+                                                
+                                   </tbody>
+                            </table>
+                     </div>
+              </div>
+
+
+<!-- Code for entering Registration Number For Deletion -->
+<?php
+       }else if(isset($_GET['delete-student'])){           
+?>
+              <div class="main center-fdct">
+                     <h1 class="heading">Delete Student</h1>
+                     <form action="?delete-student-regd-no" method="post" name="student-regd-form" enctype="multipart/form-data" class="form">
                             <div>
                                    <label for="tid">Enter Teacher ID:</label>
                                    <input type="number" name="tid" id="tid">                                   
@@ -541,13 +645,13 @@
 
 
 
-<!-- Code for Deleting Teacher -->
+<!-- Code for Deleting Deleting -->
 <?php
-       }else if(isset($_GET['delete-teacher-id'])){           
+       }else if(isset($_GET['delete-student-regd-no'])){           
 ?>
               <div class="main center-fdct">
-                     <h1 class="heading">Delete Teacher</h1>
-                     <form action="?view-all-teachers" method="post" name="add-teacher-form" enctype="multipart/form-data" class="form-expan">
+                     <h1 class="heading">Delete Student</h1>
+                     <form action="?view-all-students" method="post" name="delete-student-form" enctype="multipart/form-data" class="form-expan">
                             <div class="col-span-2 center mb-2">
                                    <img src="../../assets/image.jpg" alt="Photo" class="image">
                             </div>
@@ -555,6 +659,10 @@
                                    <label for="name">Name:</label>
                                    <input type="text" name="name" id="name">
                             </div>
+                            <div class="gender">
+                                   <label for="gender">Gender:</label><br>
+                                   <input type="text" name="gender" id="gender">
+                            </div>     
                             <div>
                                    <label for="phone">Phone:</label>
                                    <input type="number" name="phone" id="phone">
@@ -562,19 +670,15 @@
                             <div>
                                    <label for="email">Email:</label>
                                    <input type="email" name="email" id="email">
-                            </div>                      
+                            </div>                         
                             <div>
-                                   <label for="dob">DOB:</label>
-                                   <input type="text" name="dob" id="dob">
-                            </div>      
-                            <div class="gender">
-                                   <label for="gender">Gender:</label><br>
-                                   <input type="text" name="gender" id="gender">
-                            </div>  
+                                   <label for="parent">Parent:</label><br>
+                                   <input type="text" name="parent" id="parent">
+                            </div>                           
                             <div>
-                                   <label for="academic-qualifications">Academic Qualifications:</label>
-                                   <input type="text" name="academic-qualifications" id="academic-qualifications">
-                            </div>
+                                   <label for="parent-phone">Parent Phone:</label><br>
+                                   <input type="number" name="parent-phone" id="parent-phone">
+                            </div>     
                             <div class="col-span-2">
                                    <label for="address">Address:</label>
                                    <input type="text" name="address" id="address">
@@ -582,7 +686,7 @@
 
 
                             <div class="col-span-2 center">
-                                   <button class="delete-btn btn large mt-1">Delete Teacher</button>
+                                   <button class="delete-btn btn large mt-1">Delete Student</button>
                             </div>    
                      </form>
               </div>
