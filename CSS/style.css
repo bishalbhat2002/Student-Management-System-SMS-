@@ -39,6 +39,7 @@
 
   --shadow: 0.1rem 0.1rem 0.8rem 0 var(--color-secondary-100);
   --soft-shadow: 0rem 0.3rem 2rem 0 rgba(50, 50, 50, 0.373);
+  --notes-shadow: 0rem 0.5rem 2rem 0 rgba(23, 22, 22, 0.373);
 }
 
 /* CSS Code for Error and Success Handling Start Here */
@@ -863,6 +864,7 @@ table{
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   margin-bottom: 2rem;
+  box-shadow: var(--notes-shadow);
   display: grid;
   grid-template-rows: 3rem 1fr;
   grid-template-columns: minmax(6rem, 10rem) 1fr minmax(7rem, 12rem);
