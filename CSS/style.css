@@ -239,7 +239,7 @@ body {
   margin: 0 auto;
   grid-area: main;
   display: grid;
-  grid-template-columns: 62rem 5rem 40rem;
+  grid-template-columns: 55rem 5rem 45rem;
   grid-template-rows: 15rem 1fr;
   grid-template-areas:
     "greet greet greet"
@@ -262,6 +262,9 @@ body {
   }
 }
 
+.student-dashboard .greet{
+  padding-left: 2rem;
+}
 .student-status {
   grid-area: student-status;
   align-self: flex-start;
@@ -508,13 +511,29 @@ body {
   max-height: 55rem;
   width: 50rem;
   align-self: flex-end;
-  justify-self: end;
+  justify-self: center;
   overflow: auto;
   scrollbar-width: none;
 }
 .caption{
   height: 6rem;
-  width: 41.5rem;
+  width: 50rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--color-primary-100);
+  background-color: var(--bgcolor-primary-80);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 2rem;
+  position: sticky;
+  margin: 0 -2rem;
+  top: 0;
+  z-index: 5;
+}
+.caption-full{
+  height: 6rem;
+  width: 50rem;
   font-size: 3rem;
   font-weight: bold;
   color: var(--color-primary-100);
@@ -770,7 +789,7 @@ table{
   display: flex;
   justify-content: space-between;
 }
-.student-info{
+.student-info-result{
   border: 0.1rem solid var(--color-primary-80);
   border-radius: 0.5rem;
   padding: 1rem 2rem;

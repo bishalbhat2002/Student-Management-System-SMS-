@@ -530,7 +530,7 @@
                                           </div>
                                    </div>
                                    <!-- Student Info Section -->
-                                   <div class="student-info">
+                                   <div class="student-info-result">
                                           <div class="info-container">
                                                  <span>Name: Bishal Bhat</span>
                                                  <span>Regd. No: SC-4803-3294-3294</span>

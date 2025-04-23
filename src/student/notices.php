@@ -21,9 +21,9 @@
 <?php               
        }else{
 ?> 
-              <div class="main single-student-notices">                  
+              <div class="main single-student-notices center-fdct">                  
                      <div class="student-notices box pb-1">
-                            <div class="caption">Students Notice</div>
+                            <div class="caption-full">Students Notice</div>
                             <a href="?snv-id" class="notice" >
                                    <div class="notice-number">1</div>
                                    <div class="notice-title">6th Semester Form Fillup Notice...</div>

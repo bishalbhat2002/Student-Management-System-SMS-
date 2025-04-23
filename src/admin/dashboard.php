@@ -147,7 +147,7 @@
 ?>
               <div class="center-fdct main">
                      <h1 class="heading">Update Admin Info</h1>
-                     <form action="" name="updateAdminInfo" method="post" enctype="multipart/form-data" class="form-expan">
+                     <form action="" name="updateAdminInfo" method="post" enctype="multipart/form-data" class="form-expan small-input-field">
                             <input type="hidden" name="adminId" value="">
 
                             <div class="col-span-2 center mb-2">
