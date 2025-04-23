@@ -518,7 +518,7 @@
                                    <!-- Header Section -->
                                    <div class="header">
                                           <div class="fwu-logo">
-                                                 <img src="../../assets/fwu-logo.jpg" alt="FWU-Logo">
+                                                 <img src="../../assets/images/fwu-logo.jpg" alt="FWU-Logo">
                                           </div>  
                                           <div>
                                                  <h1>Farwestern University</h1>
@@ -526,7 +526,7 @@
                                                  <h3>Mahendranagar, Kanchanpur</h3>
                                           </div>                          
                                           <div class="fwu-logo">
-                                                 <img src="../../assets/fwu-logo.jpg" alt="FWU-Logo">
+                                                 <img src="../../assets/images/fwu-logo.jpg" alt="FWU-Logo">
                                           </div>
                                    </div>
                                    <!-- Student Info Section -->

@@ -1,4 +1,4 @@
-// JS code to indicate active page
+// JS code to indicate active page START here
 document.addEventListener("DOMContentLoaded", () => {
        const links = document.querySelectorAll("nav a");
        const currentUrl = window.location.href.split('?');
@@ -8,26 +8,34 @@ document.addEventListener("DOMContentLoaded", () => {
            }
        });
    });
+// JS code to indicate active page END here
 
-// JS code for hambuger Menu Slider
-function menuSlider(){       
+
+// JS code for hambuger Menu Slider START here
+function menuToggle(){       
        const navBar = document.querySelector('nav');
        const body = document.body;
+       const mainContent = document.querySelector('.main');
+
        navBar.classList.toggle('disabled');
        body.classList.toggle('allfit');
+       if(innerWidth <= 600)
+              mainContent.classList.toggle('main-disable');
 }
 
 const hambuger = document.getElementById('hambuger-icon');
-hambuger.addEventListener('click', menuSlider);      
+hambuger.addEventListener('click', menuToggle);      
 
 
-if(innerWidth <= 500){       
+if(innerWidth <= 575){       
        const navLinks = document.querySelectorAll('nav a');
        navLinks.forEach(element => {
-              element.addEventListener('click', menuSlider);       
+              element.addEventListener('click', menuToggle);       
        }); 
 }
 
+// JS code for hambuger Menu Slider END here
+console.log("efe");
 // Code to download Result as PDF... 
 function downloadPDF() {
        const result = document.querySelector(".result"); // change to your result class

@@ -233,8 +233,19 @@ a:active, .btn:active {
 .mr-3{
   margin-right: 3rem;
 }
-/* Margin Classes START */
+/* Margin Classes END */
 
+/* Padding Classes START */
+.p-1{
+       padding: 1rem;
+}
+.pt-1{
+       padding-top: 1rem;
+}
+.pb-1{
+       padding-bottom: 1rem;
+}
+/* Padding Classes END */
 
 /* Form Resusable Code START Here */
 .form, .form-expan, .box{

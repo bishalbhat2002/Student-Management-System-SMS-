@@ -29,8 +29,8 @@
        <link rel="stylesheet" href="../../CSS/mediaqueries.css">                    <!-- Mediaqueries.css file contains code required for making the website responsive -->
 </head>
 <body>
-       <div class="logo">SMS</div>
-       <div id="hambuger-icon"><img src="../../assets/hambuger.png" alt="Hamburger icon"></div>
+       <div class="logo"><a href="<?php echo BASE_URL; ?>">SMS</a></div>
+       <div id="hambuger-icon"><img src="../../assets/images/hambuger.png" alt="Hamburger icon"></div>
        <nav class="navbar">
 
               <?php if($_SESSION['role']==='admin'){ ?>

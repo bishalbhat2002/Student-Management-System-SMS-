@@ -46,7 +46,7 @@
                                    <td class="center">1001</td>
                                    <td>
                                           <span>Bishal Bhat</span>
-                                          <a href="" class="teacher-info">&#8599;</a>
+                                          <a href="" class="teacher-info-link">&#8599;</a>
                                    </td>
                             </tr>
 
@@ -56,7 +56,7 @@
                                    <td class="center">1001</td>
                                    <td>
                                           <span>Bishal Bhat</span>
-                                          <a href="" class="teacher-info">&#8599;</a>
+                                          <a href="" class="teacher-info-link">&#8599;</a>
                                    </td>
                             </tr>
 
@@ -66,7 +66,7 @@
                                    <td class="center">1001</td>
                                    <td>
                                           <span>Bishal Bhat</span>
-                                          <a href="" class="teacher-info">&#8599;</a>
+                                          <a href="" class="teacher-info-link">&#8599;</a>
                                    </td>
                             </tr>
 
@@ -76,7 +76,7 @@
                                    <td class="center">1001</td>
                                    <td>
                                           <span>Bishal Bhat</span>
-                                          <a href="" class="teacher-info">&#8599;</a>
+                                          <a href="" class="teacher-info-link">&#8599;</a>
                                    </td>
                             </tr>
                      </tbody>
@@ -229,7 +229,7 @@
                                                  <td class="tac">1001</td>
                                                  <td>
                                                         Bishal Bhat
-                                                        <a href="" class="teacher-info">&#8599;</a>
+                                                        <a href="" class="teacher-info-link">&#8599;</a>
                                                  </td>
                                                  <td> X:00 AM</td>
                                                  <td> Y:00 AM</td>
@@ -241,7 +241,7 @@
                                                  <td class="tac">1001</td>
                                                  <td>
                                                         Bishal Bhat
-                                                        <a href="" class="teacher-info">&#8599;</a>
+                                                        <a href="" class="teacher-info-link">&#8599;</a>
                                                  </td>
                                                  <td> X:00 AM</td>
                                                  <td> Y:00 AM</td>
@@ -253,7 +253,7 @@
                                                  <td class="tac">1001</td>
                                                  <td>
                                                         Bishal Bhat
-                                                        <a href="" class="teacher-info">&#8599;</a>
+                                                        <a href="" class="teacher-info-link">&#8599;</a>
                                                  </td>
                                                  <td> X:00 AM</td>
                                                  <td> Y:00 AM</td>
@@ -265,7 +265,7 @@
                                                  <td class="tac">1001</td>
                                                  <td>
                                                         Bishal Bhat
-                                                        <a href="" class="teacher-info">&#8599;</a>
+                                                        <a href="" class="teacher-info-link">&#8599;</a>
                                                  </td>
                                                  <td> X:00 AM</td>
                                                  <td> Y:00 AM</td>

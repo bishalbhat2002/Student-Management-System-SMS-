@@ -192,7 +192,7 @@
                      <form action="?edit-student-regd-no" method="post" name="view-student-form" enctype="multipart/form-data" class="form-expan small-input-field">
                            
                             <div class="col-span-2 center mb-2">
-                                   <img src="../../assets/image.jpg" alt="Photo" class="image">
+                                   <img src="../../assets/images/image.jpg" alt="Photo" class="image">
                             </div>       
                             <div>
                                    <label for="name">Name:</label>
@@ -270,7 +270,7 @@
                      <form action="" method="post" name="view-student-form" enctype="multipart/form-data" class="form-expan small-input-field">
                            
                             <div class="col-span-2 center mb-2">
-                                   <img src="../../assets/image.jpg" alt="Photo" class="image small-image">
+                                   <img src="../../assets/images/image.jpg" alt="Photo" class="image small-image">
                             </div>       
                             <div>
                                    <label for="name">Name:</label>
@@ -364,7 +364,7 @@
                      <form action="" method="post" name="add-admission-form" enctype="multipart/form-data" class="form-expan small-input-field">
                            
                             <div class="col-span-2 center mb-1">
-                                   <img src="../../assets/image.jpg" alt="Photo" class="image">
+                                   <img src="../../assets/images/image.jpg" alt="Photo" class="image">
                             </div>       
                             <div>
                                    <label for="regd-no">Registration No:</label>
@@ -653,7 +653,7 @@
                      <h1 class="heading">Delete Student</h1>
                      <form action="?view-all-students" method="post" name="delete-student-form" enctype="multipart/form-data" class="form-expan">
                             <div class="col-span-2 center mb-2">
-                                   <img src="../../assets/image.jpg" alt="Photo" class="image">
+                                   <img src="../../assets/images/image.jpg" alt="Photo" class="image">
                             </div>
                             <div>
                                    <label for="name">Name:</label>
