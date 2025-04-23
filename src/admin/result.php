@@ -52,14 +52,14 @@
             </div>  
 
 
-<!-- Code to enter students marks for result -->
+<!-- Code to enter students marks for result Publish-->
 <?php
        }else if(isset($_GET['publish-result-batch-year-regd-symbo-no'])){
 ?>
 
        <div class="main center-fdct">
               <h1 class="heading">20YY Batch, X Semester: Result Publish</h1>
-              <form action="?view-result" name="result-publish-form" method="post" enctype="multipart/form-data" class="form-expan">
+              <form action="?result-view-id" name="result-publish-form" method="post" enctype="multipart/form-data" class="form-expan">
                      <div>
                             <label for="registration-no">Regd. No:</label>
                             <input type="text" name="registration-no" id="registration-no"  >
