@@ -223,9 +223,19 @@ body {
 
 
 /* Admin code from here... */
-.admin-dashboard, .teacher-dashboard {
+.admin-dashboard, .teacher-dashboard, .student-dashboard {
   color: var(--color-primary-100);
-  display: block;
+  margin: 0 auto;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 62rem 5rem 40rem;
+  grid-template-rows: 15rem 1fr;
+  grid-template-areas:
+    "greet greet greet"
+    "student-status gap info";
+}
+.student-dashboard{
+  color: var(--color-primary-100);
   margin: 0 auto;
   grid-area: main;
   display: grid;
@@ -264,12 +274,32 @@ body {
     "more-options";
 }
 
+.student-dashboard .student-status {
+  grid-area: student-status;
+  align-self: flex-start;
+  display: grid;
+  grid-template-rows: 12rem  1fr;
+  grid-template-areas:
+  "short-info"
+  "notices";
+}
+
 .total-info {
   grid-area: total-info;
   display: flex;
   align-items: start;
   justify-content: center;
   gap: 2rem;
+}
+.short-info {
+  grid-area: short-info;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 2rem;
+}
+.student-status .dashboard-notices{
+  grid-area: notices;
 }
 
 .semester-info {
@@ -327,6 +357,24 @@ body {
   }
 }
 
+.short-info .total-attendance,
+.short-info .semester {
+  width: 20rem;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 2rem;
+  background-color: var(--bgcolor-card);
+  border: 0.1rem solid var(--color-primary-80);
+  border-radius: 0.5rem;
+  gap: 2rem;
+  font-weight: 500;
+}
+
+
 .more-options {
   grid-area: more-options;
   display: flex;
@@ -376,7 +424,7 @@ body {
   }
 }
 
-.admin-info, .teacher-info {
+.admin-info, .teacher-info, .student-info {
   grid-area: info;
   background-color: var(--bgcolor-card);
   border: 0.1rem solid var(--color-primary-80);
@@ -428,7 +476,6 @@ body {
 
 /* Update Admin Info Code ends here...  */
 
-
 /* Admin Notices CSS code Starts here */
 .notices{
   display: grid;
@@ -467,7 +514,7 @@ body {
 }
 .caption{
   height: 6rem;
-  width: 49.8;
+  width: 41.5rem;
   font-size: 3rem;
   font-weight: bold;
   color: var(--color-primary-100);
@@ -478,10 +525,14 @@ body {
   padding-left: 2rem;
   position: sticky;
   margin: 0 -2rem;
-  /* margin-top: -2rem; */
   top: 0;
   z-index: 5;
 }
+.student-status .caption{
+  width: 50rem;
+}
+
+
 .add-notice{
   font-size: 2rem;
   text-decoration: none;

@@ -56,7 +56,7 @@
   }
   
 
-  .admin-dashboard, .teacher-dashboard {
+  .admin-dashboard, .teacher-dashboard, .student-dashboard {
     grid-template-rows: 18rem 1fr 1fr;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -79,8 +79,11 @@
       "more-options";
   }
   
-.admin-info, .teacher-info {
+.admin-info, .teacher-info, .student-info {
+  align-self: flex-end;
   justify-self: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
   .total-info {
     margin: 2rem 1rem 5rem 1rem;
@@ -143,7 +146,7 @@
     "sidebar main";
   }
 
-  .admin-dashboard, .teacher-dashboard {
+  .admin-dashboard, .teacher-dashboard, .student-dashboard {
     grid-template-columns: 1fr;
     grid-template-rows: 18rem 1fr 1fr;
     grid-template-columns: 60rem;
@@ -170,8 +173,11 @@
 .total-info {
     margin: 2rem 1rem 5rem 1rem;
 }
-.admin-info, .teacher-info {
+.admin-info, .teacher-info, .teacher-info {
+  align-self: flex-end;
   justify-self: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .notices{
     grid-template-rows: 1fr 1fr;
@@ -183,6 +189,9 @@
     .teacher-notices, .student-notices{
       margin-top: 10rem;
     }
+    .student-status .student-notices{
+      margin-top: 1rem;
+    }
 }
 
 /* Small smartphones (up to 575px) */
@@ -190,15 +199,6 @@
   :root {
     font-size: 43.75%; /* 1rem = 7px */
   }
-  
-  /* body{
-    grid-template-rows: 7rem 1fr;
-    grid-template-columns: 20rem 1fr;
-    
-    grid-template-areas:
-    "sidebar header"
-    "sidebar main";
-  } */
 
   body{
     grid-template-rows: 7rem 1fr;
@@ -232,7 +232,7 @@
 }
 
 
-  .admin-dashboard, .teacher-dashboard {
+  .admin-dashboard, .teacher-dashboard, .student-dashboard {
     grid-template-columns: 1fr;
     grid-template-rows: 18rem 1fr 1fr;
     grid-template-columns: 60rem;
@@ -261,11 +261,13 @@
   }
 
   
-.admin-info, .teacher-info {
+.admin-info, .teacher-info, .student-info {
   width: 45rem;
   min-height: 45rem;
   align-self: flex-end;
   justify-self: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   padding: 2rem;
 
   img {
@@ -307,4 +309,9 @@
   .teacher-notices, .student-notices{
     margin-top: 10rem;
   }
+
+  .student-status .student-notices{
+    margin-top: 1rem;
+  }
+
 }
