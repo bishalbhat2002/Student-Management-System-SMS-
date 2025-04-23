@@ -853,6 +853,67 @@ table{
 
 
 /* Teacher Section Code START here */
+.study-material-container{
+  max-height: 30rem;
+  min-width: min(100rem, 90vw);
+  max-width: 90%; 
+  background-color: var(--color-primary-100);
+  color: var(--color-secondary-80);
+  border: 0.2rem solid var(--color-primary-100);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-rows: 3rem 1fr;
+  grid-template-columns: minmax(6rem, 10rem) 1fr minmax(7rem, 12rem);
+  grid-template-areas: 
+          'id subject-title actions'
+          'id-value main-content actions';
+  .id{
+    grid-area: id;
+    font-size: 2rem;
+    font-weight: 500;
+    justify-self: center;
+    align-self: center;
+  }
+  .subject-title{
+    grid-area: subject-title;
+
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .id-value{
+    grid-area: id-value;
+    font-size: 2rem;
+    font-weight: 400;
+    justify-self: center;
+    align-self: start;
+    margin-top: 0.5rem;
+  }
+  .main-content{
+    grid-area: main-content;
+    p{
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin: 0.3rem 0;
+    }
+    .teacher-name, .sent-date{
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+  }
+  .actions{
+    grid-area: actions;
+    justify-self: center;
+    align-self: center;
+  }
+  a{
+    font-size: 1.3rem;
+  }
+}
+
+
+
 
 /* Teacher Section Code END here */
 

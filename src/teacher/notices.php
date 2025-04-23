@@ -1,9 +1,9 @@
 <?php require_once "../../includes/header.php"; ?>
 
+<!-- Code to View Teacher Notice -->
 <?php
        if(isset($_GET['tnv-id'])){
 ?>
-<!-- Code to View Teacher Notice -->
               <div class="center-fdct main">
                      <h1 class="heading">View Notice</h1>
                      <div class="box notice-view-box">
@@ -18,10 +18,11 @@
                     
               </div>
 
+
+<!-- Code to View student Notice -->
 <?php
        } else if(isset($_GET['snv-id'])){
 ?>
-<!-- Code to View student Notice -->
               <div class="center-fdct main">
                      <h1 class="heading">View Notice</h1>
                      <div class="box notice-view-box">
@@ -34,6 +35,33 @@
 
                      </div>
                     
+              </div>
+
+       
+              
+<!-- Code to Send Notice to Student  -->
+<?php
+       } else if(isset($_GET['add-student-notice'])){
+?>
+              <div class="center-fdct main">
+                     <h1 class="heading">Send Notice to Students</h1>
+                     <form action="" method="post" name="noticeForm" enctype="multipart/form-data" class="form">
+                            <div>
+                                   <label for="title">Notice Title:</label> <br>
+                                   <input type="text" name="title" id="title" required>
+                            </div>
+                            <div>  
+                                   <label for="noticeBody">Notice Body</label> <br>
+                                   <textarea name="noticeBody" id="noticeBody" cols="30" rows="5" placeholder="Notice body here..."></textarea>
+                            </div>
+                            <div>
+                                   <label for="noticePhoto">Upload Notice:</label> <br>
+                                   <input type="file" name="noticePhoto" id="noticePhoto" required>
+                            </div>
+                            <div class="center">
+                                   <input type="submit" class="submit-btn" value="Send Notice">
+                            </div>
+                     </form>
               </div>
 
 <?php               

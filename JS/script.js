@@ -35,9 +35,26 @@ if(innerWidth <= 575){
 }
 
 // JS code for hambuger Menu Slider END here
-console.log("efe");
-// Code to download Result as PDF... 
+
+
+// Code to download Result as PDF START here 
 function downloadPDF() {
        const result = document.querySelector(".result"); // change to your result class
        html2pdf().from(result).save('result.pdf');
 }
+// Code to download Result as PDF END here
+
+
+
+// Code to confirm Attendance Form SUbmit START here
+function attendanceSubmitConfirm(){
+       return confirm("Are You sure, You want to Submit Attendance Form? Editing Attendance Is not Allowed after Submit..");
+}
+// Code to confirm Attendance Form SUbmit END here
+
+
+// Code to confirm Delete START here
+function confirmDelete(id='1001'){
+      return confirm(`Are you sure, You Want to delete Record with id : ${id}`);
+}
+// Code to confirm Delete END here
