@@ -24,6 +24,10 @@
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>Student Management System</title>
+       
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
        <link rel="stylesheet" href="../../CSS/utilityClasses.css">                  <!-- Utility Classes linked first because we might overwrite some classes in Style.css file, It contains classes with most used properties. --> 
        <link rel="stylesheet" href="../../CSS/style.css">                           <!-- Style.css added for general Styling -->
        <link rel="stylesheet" href="../../CSS/mediaqueries.css">                    <!-- Mediaqueries.css file contains code required for making the website responsive -->

@@ -4,7 +4,7 @@
   /* Background Colors */
   --bgcolor-primary-100: #292727;
   --bgcolor-primary-80: #414141;
-  --bgcolor-primary-50: #717171;
+  --bgcolor-primary-50: #aaaaaab3;
 
   --bgcolor-secondary-100: #0029b1;
   --bgcolor-secondary-80: #1f51f7;
@@ -16,7 +16,7 @@
   /* Text colors */
   --color-primary-100: #ffffff;
   --color-primary-80: #cfcfcf;
-  --color-primary-50: #808080;
+  --color-primary-50: #c4c3c3;
 
   --color-secondary-100: #0d0d0d;
   --color-secondary-80: #2e2d2d;
@@ -25,16 +25,16 @@
   /* Button colors */
   --color-success: rgb(19, 198, 19);
   --color-danger: rgb(255, 85, 0);
-  --color-warning: rgb(225, 255, 0);
+  --color-warning: rgb(252, 96, 18);
   --color-edit: rgb(76, 76, 248);
-  --color-add: rgb(226, 41, 246);
+  --color-add: rgb(12, 124, 46);
   --color-update: rgb(59, 79, 255);
-  --color-save: rgb(219, 54, 252);
-  --color-delete: rgb(225, 55, 17);
-  --color-view: rgb(136, 26, 239);
+  --color-save: rgb(33, 178, 8);
+  --color-delete: rgb(244, 78, 41);
+  --color-view: rgba(152, 50, 247, 0.847);
   --bgcolor-hover: rgb(49, 49, 255);
   --color-hover: rgb(253, 253, 253);
-  --color-reset: rgba(215, 62, 250, 0.682);
+  --color-reset: rgba(163, 12, 197, 0.682);
   --color-highlighter: rgb(254, 187, 63);
 
   --shadow: 0.1rem 0.1rem 0.8rem 0 var(--color-secondary-100);
@@ -152,7 +152,7 @@ body {
 
         a:hover {
           color: var(--color-secondary-100);
-          background-color: var(--color-primary-80);
+          background-color: var(--color-primary-50);
           transition: all 300ms ease;
         }
       }
@@ -171,7 +171,7 @@ body {
 
       a {
         text-decoration: none;
-        font-size: 1.5rem;
+        font-size: 2rem;
         color: var(--color-primary-100);
         background-color: var(--bgcolor-primary-80);
         padding: 1rem 2rem;
