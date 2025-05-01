@@ -9,6 +9,10 @@
                      <h1 class="heading">Add New Student</h1>
                      <form action="?view-all-students" method="post" name="add-student-form" enctype="multipart/form-data" class="form-expan">
                             <div>
+                                   <label for="regd-no">Registration No:</label>
+                                   <input type="text" name="regd-no" id="regd-no">
+                            </div>
+                            <div>
                                    <label for="name">Name:</label>
                                    <input type="text" name="name" id="name">
                             </div>
@@ -46,7 +50,7 @@
                             <div> 
                                    <label for="photo">Upload Photo:</label>
                                    <input type="file" name="photo" id="photo">
-                            </div> <br>                
+                            </div>              
                             <div>
                                    <label for="see-result">SEE Result:</label>
                                    <input type="file" name="see-result" id="see-result">
@@ -197,6 +201,10 @@
                             <div>
                                    <label for="name">Name:</label>
                                    <input type="text" name="name" id="name">
+                            </div>                            
+                            <div>
+                                   <label for="regd-no">Registration No:</label>
+                                   <input type="text" name="regd-no" id="regd-no">
                             </div>
                             <div>
                                    <label for="dob">DOB:</label>
