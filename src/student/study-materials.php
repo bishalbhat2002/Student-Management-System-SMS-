@@ -6,7 +6,7 @@
               <div class="center-fdct">
                      <h1 class="heading">Semester X, View Study Materials</h1>
                      
-                     <form action="?view-attendance-sem" name="sem-select-form" method="POST" enctype="multipart/form-data" class="study-material-container">
+                     <form action="" name="sem-select-form" method="POST" enctype="multipart/form-data" class="study-material-container smc-student">
                             <div class="id">ID</div>
                             <div class="subject-title">Web Technology - II</div>
                             <div class="id-value">1021</div>
@@ -23,10 +23,6 @@
                                                  <span class="sent-date"><?php echo date('Y-m-d');?></span>
                                           </div>
                                    </div>
-                            </div>
-                            <div class="actions">
-                                   <a href="?update-study-material-id" class="update-btn">update</a><br>
-                                   <a href="?update-study-material-id" class="delete-btn" onclick="return confirmDelete(id)">Delete</a>
                             </div>
                      </form>                                                
 

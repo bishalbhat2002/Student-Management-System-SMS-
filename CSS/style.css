@@ -4,11 +4,12 @@
   /* Background Colors */
   --bgcolor-primary-100: #292727;
   --bgcolor-primary-80: #414141;
-  --bgcolor-primary-50: #aaaaaab3;
+  --bgcolor-primary-50: #b5b2b2bb;
+  --bgcolor-form: #c4c4c4;
 
   --bgcolor-secondary-100: #0029b1;
   --bgcolor-secondary-80: #1f51f7;
-  --bgcolor-secondary-50: #7190f6;
+  --bgcolor-secondary-50: #5878e0;
 
   --bgcolor-card: #7171714c;
   --bgcolor-focus: rgb(136, 199, 244);
@@ -24,17 +25,17 @@
 
   /* Button colors */
   --color-success: rgb(19, 198, 19);
-  --color-danger: rgb(255, 85, 0);
+  --color-danger: rgb(252, 91, 11);
   --color-warning: rgb(252, 96, 18);
   --color-edit: rgb(76, 76, 248);
   --color-add: rgb(12, 124, 46);
   --color-update: rgb(59, 79, 255);
   --color-save: rgb(33, 178, 8);
-  --color-delete: rgb(244, 78, 41);
-  --color-view: rgba(152, 50, 247, 0.847);
+  --color-delete: rgb(255, 97, 53);
+  --color-view: rgba(171, 88, 249, 0.925);
   --bgcolor-hover: rgb(49, 49, 255);
   --color-hover: rgb(253, 253, 253);
-  --color-reset: rgba(163, 12, 197, 0.682);
+  --color-reset: rgb(213, 147, 5);
   --color-highlighter: rgb(254, 187, 63);
 
   --shadow: 0.1rem 0.1rem 0.8rem 0 var(--color-secondary-100);
@@ -417,7 +418,7 @@ body {
     text-decoration: none;
     font-size: 2rem;
     font-weight: 600;
-    color: var(--color-primary-80);
+    color: var(--color-primary-100);
     background-color: var(--color-reset);
     outline: 0.1rem solid var(--color-primary-80);
     border-radius: 0.5rem;
@@ -471,8 +472,8 @@ body {
 
 .heading{
   font-size: 3rem;
-  color: var(--color-primary-80);
-  margin: 2rem 0 2rem 0;
+  color: var(--color-primary-100);
+  margin: 2.5rem 0 1.5rem 0;
   text-align: center;
 }
 /* FORM related codes are written on UtilityClasses.css file because form are used on many web pages. */
@@ -662,7 +663,7 @@ textarea{
       align-items: center;
       justify-content: center;
       font-size: 2rem;
-      font-weight: 500;
+      font-weight: bold;
       height: inherit;
       width: 10rem;
       background-color: var(--bgcolor-secondary-50);
@@ -883,7 +884,7 @@ table{
   min-width: 100rem;
   max-width: 80vw;
   max-height: calc(100dvh - 17rem);
-  background-color: var(--bgcolor-primary-50);
+  background-color: var(--bgcolor-form);
   border: 0.1rem solid var(--color-primary-80);
   border-radius: 0.5rem;
   padding: 2rem;
@@ -984,7 +985,11 @@ table{
   }
 }
 
-
+.smc-student{
+  grid-template-areas: 
+  'id subject-title actions'
+  'id-value main-content main-content';
+}
 
 
 /* Teacher Section Code END here */

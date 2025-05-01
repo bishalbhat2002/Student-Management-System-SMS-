@@ -4,6 +4,11 @@
     font-size: 62.5%; /* Keep it the same for large screens */
   }
 
+  #hambuger-icon{
+      display: none;
+  }
+  
+
   .form-expan, .box-expan{
     width: 89rem;
     display: grid;
@@ -36,7 +41,10 @@
   :root {
     font-size: 56.25%; /* 1rem = 9px */
   }
-
+  #hambuger-icon{
+      display: none;
+  }
+  
   nav {
     width: 20rem;
     z-index: 3;

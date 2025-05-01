@@ -5,6 +5,7 @@
   --bgcolor-primary-100: #292727;
   --bgcolor-primary-80: #414141;
   --bgcolor-primary-50: #aaaaaab3;
+  --bgcolor-form: #c4c4c4;
 
   /* Text Colors */
   --color-primary-100: #ffffff;
@@ -59,7 +60,7 @@ body {
     /* height: 45rem; */
     padding: 1.5rem;
     padding-bottom: 2.5rem;
-    background-color: var(--bgcolor-primary-50);
+    background-color: var(--bgcolor-form);
     border-radius: 0.5rem;
     box-shadow: var(--shadow);
 
@@ -72,12 +73,12 @@ body {
     .login {
       width: 100%;
       padding-bottom: 0.4rem;
-      border-bottom: 0.15rem solid var(--color-primary-80);
+      border-bottom: 0.15rem solid var(--color-secondary-50);
       h1{
         font-size: 4rem;
         font-weight: bold;
         text-align: center;
-        color: var(--color-primary-100);
+        color: var(--color-secondary-80);   
       }
     }
     label {

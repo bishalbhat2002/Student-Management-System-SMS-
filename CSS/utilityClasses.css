@@ -257,7 +257,7 @@ a:active, .btn:active {
   min-width: 35rem;
   width: min(42.5rem, 90%);
   max-width: 89rem;
-  background-color: var(--bgcolor-primary-50);
+  background-color: var(--bgcolor-form);
   border: 0.1rem solid var(--color-primary-80);
   border-radius: 0.5rem;
   padding: 2rem;
@@ -277,7 +277,7 @@ a:active, .btn:active {
   min-width: 80rem;
   max-width: 80vw;
   max-height: calc(100dvh - 17rem);
-  background-color: var(--bgcolor-primary-50);
+  background-color: var(--bgcolor-form);
   border: 0.1rem solid var(--color-primary-80);
   border-radius: 0.5rem;
   padding: 2rem;
@@ -287,7 +287,7 @@ a:active, .btn:active {
 
 label{
   font-size: 1.6rem;
-  color: var(--color-secondary-80);
+  color: var(--color-secondary-50);
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
@@ -336,8 +336,8 @@ textarea:focus{
 
 .gender{
   font-size: 1.8rem;
-  color: var(--color-secondary-80);
-  font-weight: 600;
+  color: var(--color-secondary-50);
+  font-weight: 500;
 }
 input[type='radio']{
   transform: scale(1.5);
