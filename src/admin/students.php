@@ -17,6 +17,15 @@
                                    <input type="text" name="name" id="name">
                             </div>
                             <div>
+                                   <label for="faculty">Faculty:</label>
+                                   <input type="text" name="faculty" id="faculty">
+                            </div> 
+                            <div class="gender">
+                                   <label for="gender">Gender:</label><br>
+                                   <input type="radio" name="gender" value="male">Male
+                                   <input type="radio" name="gender" value="female">Female
+                            </div> 
+                            <div>
                                    <label for="phone">Phone:</label>
                                    <input type="number" name="phone" id="phone">
                             </div>
@@ -28,20 +37,13 @@
                                    <label for="dob">DOB:</label>
                                    <input type="date" name="dob" id="dob">
                             </div>      
-                            <div class="gender">
-                                   <label for="gender">Gender:</label><br>
-                                   <input type="radio" name="gender" value="male">Male
-                                   <input type="radio" name="gender" value="female">Female
-                            </div>  
+             
 
                             <div>
                                    <label for="address">Address:</label>
                                    <input type="text" name="address" id="address">
                             </div> 
-                            <div>
-                                   <label for="parent-name">Parent:</label>
-                                   <input type="text" name="parent-name" id="parent-name">
-                            </div>                                
+                               
                             <div>
                                    <label for="parent-phone">Parent Phone:</label>
                                    <input type="number" name="parent-phone" id="parent-phone">
@@ -207,13 +209,17 @@
                                    <input type="text" name="regd-no" id="regd-no">
                             </div>
                             <div>
-                                   <label for="dob">DOB:</label>
-                                   <input type="date" name="dob" id="dob">
-                            </div>      
+                                   <label for="faculty">Faculty:</label>
+                                   <input type="text" name="faculty" id="faculty">
+                            </div>   
                             <div class="gender">
                                    <label for="gender">Gender:</label><br>
                                    <input type="text" name="gender" id="gender">
-                            </div>  
+                            </div>                              
+                            <div>
+                                   <label for="dob">DOB:</label>
+                                   <input type="date" name="dob" id="dob">
+                            </div>      
                             <div>
                                    <label for="phone">Phone:</label>
                                    <input type="number" name="phone" id="phone">
@@ -226,10 +232,6 @@
                                    <label for="address">Address:</label>
                                    <input type="text" name="address" id="address">
                             </div> 
-                            <div>
-                                   <label for="parent-name">Parent:</label>
-                                   <input type="text" name="parent-name" id="parent-name">
-                            </div>                                
                             <div>
                                    <label for="parent-phone">Parent Phone:</label>
                                    <input type="number" name="parent-phone" id="parent-phone">
@@ -285,6 +287,10 @@
                                    <input type="text" name="name" id="name">
                             </div>
                             <div>
+                                   <label for="faculty">Faculty:</label>
+                                   <input type="text" name="faculty" id="faculty">
+                            </div>                        
+                            <div>
                                    <label for="dob">DOB:</label>
                                    <input type="date" name="dob" id="dob">
                             </div>      
@@ -304,11 +310,7 @@
                             <div>
                                    <label for="address">Address:</label>
                                    <input type="text" name="address" id="address">
-                            </div> 
-                            <div>
-                                   <label for="parent-name">Parent:</label>
-                                   <input type="text" name="parent-name" id="parent-name">
-                            </div>                                
+                            </div>         
                             <div>
                                    <label for="parent-phone">Parent Phone:</label>
                                    <input type="number" name="parent-phone" id="parent-phone">
@@ -390,8 +392,8 @@
                                    <input type="text" name="address" id="address">
                             </div> 
                             <div>
-                                   <label for="parent-name">Parent:</label>
-                                   <input type="text" name="parent-name" id="parent-name">
+                                   <label for="faculty">Faculty:</label>
+                                   <input type="text" name="faculty" id="faculty">
                             </div>                                
                             <div>
                                    <label for="parent-phone">Parent Phone:</label>

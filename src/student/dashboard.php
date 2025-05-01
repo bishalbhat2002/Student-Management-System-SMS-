@@ -19,6 +19,10 @@ if (isset($_GET['update-student-info'])) {
                             <input type="text" name="name" id="name">
                      </div>
                      <div>
+                                   <label for="faculty">Faculty:</label>
+                                   <input type="text" name="faculty" id="faculty" readonly>
+                     </div> 
+                     <div>
                             <label for="dob">DOB:</label>
                             <input type="date" name="dob" id="dob">
                      </div>
@@ -38,10 +42,6 @@ if (isset($_GET['update-student-info'])) {
                      <div>
                             <label for="address">Address:</label>
                             <input type="text" name="address" id="address">
-                     </div>
-                     <div>
-                            <label for="parent-name">Parent:</label>
-                            <input type="text" name="parent-name" id="parent-name">
                      </div>
                      <div>
                             <label for="parent-phone">Parent Phone:</label>
