@@ -242,7 +242,7 @@
 
   .admin-dashboard, .teacher-dashboard, .student-dashboard {
     grid-template-columns: 1fr;
-    grid-template-rows: 18rem 1fr 1fr;
+    grid-template-rows: 18rem 50rem 1fr;
     grid-template-columns: 60rem;
     grid-template-areas:
       "greet"
@@ -256,7 +256,7 @@
   
   .student-status {
     grid-template-columns: 60rem;
-    grid-template-rows: 12rem 20rem  4rem 10rem;
+    grid-template-rows: 12rem 20rem  1rem 10rem;
     grid-template-areas:
       "total-info"
       "semester-info"

@@ -27,15 +27,15 @@
   --color-success: rgb(19, 198, 19);
   --color-danger: rgb(252, 91, 11);
   --color-warning: rgb(252, 96, 18);
-  --color-edit: rgb(76, 76, 248);
-  --color-add: rgb(12, 124, 46);
-  --color-update: rgb(59, 79, 255);
+  --color-edit: rgba(110, 110, 243, 0.719);
+  --color-add: rgba(42, 165, 79, 0.849);
+  --color-update: rgba(89, 104, 238, 0.849);
   --color-save: rgb(33, 178, 8);
-  --color-delete: rgb(255, 97, 53);
-  --color-view: rgba(171, 88, 249, 0.925);
+  --color-delete: rgba(255, 97, 53, 0.863);
+  --color-view: rgba(116, 116, 116, 0.925);
   --bgcolor-hover: rgb(49, 49, 255);
   --color-hover: rgb(253, 253, 253);
-  --color-reset: rgb(213, 147, 5);
+  --color-reset: rgb(228, 166, 32);
   --color-highlighter: rgb(254, 187, 63);
 
   --shadow: 0.1rem 0.1rem 0.8rem 0 var(--color-secondary-100);
@@ -230,9 +230,9 @@ body {
   grid-area: main;
   display: grid;
   grid-template-columns: 62rem 5rem 40rem;
-  grid-template-rows: 15rem 1fr;
+  grid-template-rows: 20rem 1fr;
   grid-template-areas:
-    "greet greet greet"
+    "greet gap info"
     "student-status gap info";
 }
 .student-dashboard{
@@ -270,7 +270,7 @@ body {
   grid-area: student-status;
   align-self: flex-start;
   display: grid;
-  grid-template-rows: 12rem 20rem  9rem 10rem;
+  grid-template-rows: 10rem 19rem  2rem 10rem;
   grid-template-areas:
     "total-info"
     "semester-info"
@@ -383,7 +383,7 @@ body {
   grid-area: more-options;
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: end;
   gap: 2rem;
 
   .tadmission-container {
@@ -435,9 +435,9 @@ body {
   border-radius: 0.5rem;
   min-width: 35rem;
   max-width: 50rem;
-  height: 48rem;
+  max-height: 54rem;
   padding: 2rem;
-  align-self: flex-start;
+  align-self: flex-end;
   div{
     display: flex;
     flex-direction: column;
@@ -498,7 +498,7 @@ body {
 
 .teacher-notices{
   grid-area: teachers;
-  max-height: 55rem;
+  max-height: 60rem;
   width: 50rem;
   justify-self: start;
   align-self: flex-end;
@@ -509,7 +509,7 @@ body {
 .student-notices{
   padding-top: 0;
   grid-area: students;
-  max-height: 55rem;
+  max-height: 60rem;
   width: 50rem;
   align-self: flex-end;
   justify-self: center;
