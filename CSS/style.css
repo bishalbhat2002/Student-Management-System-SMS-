@@ -5,7 +5,7 @@
   --bgcolor-primary-100: #292727;
   --bgcolor-primary-80: #414141;
   --bgcolor-primary-50: #b5b2b2bb;
-  --bgcolor-form: #c4c4c4;
+  --bgcolor-form: #c7c7c7;
 
   --bgcolor-secondary-100: #0029b1;
   --bgcolor-secondary-80: #1f51f7;
@@ -38,7 +38,7 @@
   --color-reset: rgb(228, 166, 32);
   --color-highlighter: rgb(254, 187, 63);
 
-  --shadow: 0.1rem 0.1rem 0.8rem 0 var(--color-secondary-100);
+  --shadow: 0.1rem 0.1rem 0.8rem 0 var(--color-secondary-80);
   --soft-shadow: 0rem 0.3rem 2rem 0 rgba(50, 50, 50, 0.373);
   --notes-shadow: 0rem 0.5rem 2rem 0 rgba(23, 22, 22, 0.373);
 }
@@ -182,6 +182,7 @@ body {
       a:hover {
         color: rgb(36, 36, 36);
         background-color: rgb(179, 178, 178);
+        font-weight: bold;
       }
     }
   }
@@ -224,7 +225,7 @@ body {
 
 
 /* Admin code from here... */
-.admin-dashboard, .teacher-dashboard, .student-dashboard {
+.admin-dashboard, .teacher-dashboard {
   color: var(--color-primary-100);
   margin: 0 auto;
   grid-area: main;
@@ -243,7 +244,7 @@ body {
   grid-template-columns: 55rem 5rem 45rem;
   grid-template-rows: 15rem 1fr;
   grid-template-areas:
-    "greet greet greet"
+    "greet gap info"
     "student-status gap info";
 }
 
